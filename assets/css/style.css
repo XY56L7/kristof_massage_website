@@ -25,7 +25,9 @@ body {
     min-height: 100vh;
     position: relative;
     overflow-x: hidden;
+    overflow-y: auto;
     width: 100%;
+    -webkit-overflow-scrolling: touch;
 }
 
 .wrapper {
@@ -1585,7 +1587,7 @@ body.menu-open {
     height: auto;
     margin-bottom: 30px;
     overflow: visible;
-    min-height: auto;
+    min-height: 500px;
   }
 
   .banner-left {

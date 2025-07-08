@@ -1,4 +1,3 @@
-/* Horizontal scrolling fix for all screen sizes */
 * {
     box-sizing: border-box;
 }
@@ -8,18 +7,88 @@ html, body {
     overflow-x: hidden;
 }
 
-/* Mobilra specifikus fixek */
+/* Mobilos scroll problémák javítása */
 @media (max-width: 768px) {
-    /* Navbar padding csökkentése */
+    html, body {
+        overflow-x: hidden;
+        overflow-y: auto; /* Biztosítjuk a függőleges görgetést */
+        position: relative;
+        width: 100%;
+        height: auto;
+        min-height: 100vh;
+    }
+    
+    body {
+        -webkit-overflow-scrolling: touch; /* Smooth scrolling iOS-on */
+    }
+    
+    .wrapper {
+        overflow-x: hidden;
+        width: 100%;
+        min-height: 100vh;
+        position: relative;
+    }
+    
     .navbar {
         padding: 1rem 10px !important;
     }
     
-    /* Banner section padding fix */
+    /* Banner section magasság és padding javítások */
     .banner-sec {
         width: 100% !important;
         padding-left: 10px !important;
         padding-right: 10px !important;
+        height: 70vh !important; /* Megnövelem a magasságot hogy jobban kitöltse a képernyőt */
+        min-height: 500px !important; /* Minimum magasság biztosítása */
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+    
+    /* Banner tartalom igazítása */
+    .banner-right {
+        width: 100% !important;
+        height: 100% !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+    
+    .border-right {
+        width: 100% !important;
+        height: 90% !important;
+        min-height: 400px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+    
+    .border-right-content {
+        width: 100% !important;
+        height: 100% !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+    
+    .splide,
+    .splide__track,
+    .splide__list {
+        height: 100% !important;
+    }
+    
+    .splide__slide {
+        height: 100% !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+    
+    .splide__slide img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        border-radius: 15px !important;
     }
     
     /* Footer width fix */
@@ -152,12 +221,42 @@ html, body {
 }
 
 @media (max-width: 600px) {
+    /* Scroll problémák javítása kis képernyőkön */
+    html, body {
+        overflow-x: hidden;
+        overflow-y: auto;
+        position: relative;
+        width: 100%;
+        height: auto;
+        min-height: 100vh;
+    }
+    
+    body {
+        -webkit-overflow-scrolling: touch;
+        overscroll-behavior: contain; /* Bounce effect csökkentése */
+    }
+    
+    .wrapper {
+        overflow-x: hidden;
+        width: 100%;
+        min-height: 100vh;
+        position: relative;
+    }
+    
     /* Még kisebb padding még kisebb képernyőkre */
     .navbar {
         padding: 0.5rem 5px !important;
     }
     
-    .banner-sec, .containers, .contact-sec, .service-grid, 
+    /* Banner section még nagyobb magasság kis képernyőkön */
+    .banner-sec {
+        height: 75vh !important;
+        min-height: 550px !important;
+        padding-left: 5px !important;
+        padding-right: 5px !important;
+    }
+    
+    .containers, .contact-sec, .service-grid, 
     .testinomial, .faq-section, .about-sec {
         padding-left: 5px !important;
         padding-right: 5px !important;
