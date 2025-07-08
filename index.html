@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hu">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home :: Aroved Wellness</title>
+    <title>Kezdőlap :: Aroved Wellness</title>
     <link rel="stylesheet" href="./assets/css/style.css" />
     <link rel="stylesheet" href="./assets/css/responsive.css" />
     <link rel="stylesheet" href="./asset/css/fancybox.css" />
@@ -13,386 +13,806 @@
   </head>
 
   <body>
-
-    <div class="containers">
+    <div class="wrapper">
       <div class="navbar">
         <img class="leaf" src="./assets/image/icon/leaf.png" alt="icon" />
         <div class="left-side">
-          <div class="logo ">
+          <div class="logo">
             <img class="logo-gsap" src="./assets/image/logo/Aroved Wellness.png" alt="logo" />
- <div class="logo-content">
-  <h1 class="logo-name">aroved</h1>
-  <p class="logo-slogan">wellness studio & spa</p>
- </div>
+            <div class="logo-content">
+              <h1 class="logo-name">Kajtár Kristóf</h1>
+              <p class="logo-slogan">Gyógymasszőr</p>
+            </div>
           </div>
         </div>
+        
         <div class="middle-side">
           <div class="list-navbar">
-            <!-- <div class="list-navba-element menu-gsap">Home</div> -->
-            <a href="#about"><div class="list-navba-element menu-gsap">About</div>
-            <a href="#service"><div class="list-navba-element menu-gsap">Services</div></a>
-            <a href="#gallery"><div class="list-navba-element menu-gsap">Gallery</div></a>
-            <a href="#testinomial"><div class="list-navba-element menu-gsap">Testinomial</div></a>
-            <a href="#contact"><div class="list-navba-element menu-gsap">Contact Us</div></a>
-            <a href="#book" data-fancybox data-src="#dialog-content"><div class="list-navba-element-btn menu-gsap">Book Now</div></a>
+            <a href="#about"><div class="list-navba-element menu-gsap">Rólunk</div></a>
+            <a href="#service"><div class="list-navba-element menu-gsap">Szolgáltatások</div></a>
+            <a href="#gallery"><div class="list-navba-element menu-gsap">Galéria</div></a>
+            <a href="#testinomial"><div class="list-navba-element menu-gsap">Vélemények</div></a>
+            <a href="#faq"><div class="list-navba-element menu-gsap">GYIK</div></a>
+            <a href="#contact"><div class="list-navba-element menu-gsap">Kapcsolat</div></a>
+            <a href="#book" data-fancybox data-src="#dialog-content"><div class="list-navba-element-btn menu-gsap">Foglalás</div></a>
           </div>
         </div>
         <div class="right-side">
           <div class="social-icons">
-            <i class="fa-brands fa-facebook-f logo-social"></i>
-            <i class="fa-brands fa-instagram logo-social"></i>
-            <i class="fa-brands fa-youtube logo-social"></i>
-            <i class="fa-brands fa-twitter logo-social"></i>
+            <a href="https://www.facebook.com/kajtar.kristof?locale=hu_HU" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/kajtar.k?igsh=cGxtamFjNWZ5bGw2" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+          </div>
+        </div>
+
+        <!-- Hamburger Menu Button -->
+        <button class="hamburger-menu" aria-label="Menü">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </button>
+      </div>
+
+      <!-- Mobile Navigation -->
+      <div class="mobile-nav">
+        <div class="mobile-nav-content">
+          <div class="mobile-nav-header">
+            <img src="./assets/image/logo/Aroved Wellness.png" alt="logo" class="mobile-logo" />
+            <button class="close-menu" aria-label="Menü bezárása">
+              <i class="fa-solid fa-times"></i>
+            </button>
+          </div>
+          <nav class="mobile-nav-links">
+            <a href="#about" class="mobile-nav-link">Rólunk</a>
+            <a href="#service" class="mobile-nav-link">Szolgáltatások</a>
+            <a href="#gallery" class="mobile-nav-link">Galéria</a>
+            <a href="#testinomial" class="mobile-nav-link">Vélemények</a>
+            <a href="#faq" class="mobile-nav-link">GYIK</a>
+            <a href="#contact" class="mobile-nav-link">Kapcsolat</a>
+            <a href="#book" data-fancybox data-src="#dialog-content" class="mobile-nav-link highlight">Foglalás</a>
+          </nav>
+          <div class="mobile-social-icons">
+            <a href="https://www.facebook.com/kajtar.kristof?locale=hu_HU" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/kajtar.k?igsh=cGxtamFjNWZ5bGw2" target="_blank"><i class="fa-brands fa-instagram"></i></a>
           </div>
         </div>
       </div>
-    </div>
 
-    <div class="containers">
-      <div class="banner-sec">
-        <img class="golden-leaf" src="./assets/image/icon/golden-leaf.png" alt="gold">
-        <div class="banner-left banner-gsap-left">
-          <div class="upper-banner">
-            <h1 class="main-heading">Aroved Wellness</h1>
-            <p class="seconde-desine">
-              <i class="fa-solid fa-circle"></i> Relax & Chill
-              <i class="fa-solid fa-circle"></i>
-            </p>
-          </div>
-          <div class="divider"></div>
-          <div class="bottom-banner">
-            <p class="bottom-2nd-head">A spot of Paradise</p>
-            <p class="bottom-2nd-para">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's. Lorem Ipsum has
-              been the industry's.
-            </p>
-            <button class="buttom-book-btn">Book Now</button
-            ><button class="buttom-read-more">Read More...</button>
-          </div>
-        </div>
-        <div class="banner-right">
-          <div class="border-right banner-gsap">
-            <div class="border-right-content banner-gsap">
-              <div class="splide">
-                <div class="splide__track">
-                  <ul class="splide__list">
-                    <li class="splide__slide">
-                      <img src="./assets/image/banner/1.jpg" alt="Slide 1" />
-                    </li>
-                    <li class="splide__slide">
-                      <video src="./assets/video/1.mp4" type="video/mp4" autoplay loop muted></video>
-                    </li>
-                    
-                    
-                    <li class="splide__slide">
-                      <img src="./assets/image/banner/2.jpg" alt="Slide 2" />
-                    </li>
-                    <li class="splide__slide">
-                      <img src="./assets/image/banner/3.jpg" alt="Slide 3" />
-                    </li>
-                  </ul>
+      <main>
+        <div class="containers">
+          <div class="banner-sec">
+            <img class="golden-leaf" src="./assets/image/icon/golden-leaf.png" alt="gold">
+            <div class="banner-left banner-gsap-left">
+              <div class="upper-banner">
+                <h1 class="main-heading">Kajtar Kristof</h1>
+                <p class="seconde-desine">
+                  <i class="fa-solid fa-circle"></i> Pihenés & Kikapcsolódás
+                  <i class="fa-solid fa-circle"></i>
+                </p>
+              </div>
+              <div class="divider"></div>
+              <div class="bottom-banner">
+                <p class="bottom-2nd-head">A paradicsom egy szelete</p>
+                <p class="bottom-2nd-para">
+                  Fedezze fel a tökéletes kikapcsolódás és wellness élmény világát nálunk.
+                  Szakértő csapatunk személyre szabott kezelésekkel várja Önt egy
+                  felejthetetlen élményért.
+                </p>
+                <button class="buttom-book-btn">Foglalás</button
+                ><button class="buttom-read-more">Tudj meg többet...</button>
+              </div>
+            </div>
+            <div class="banner-right">
+              <div class="border-right banner-gsap">
+                <div class="border-right-content banner-gsap">
+                  <div class="splide">
+                    <div class="splide__track">
+                      <ul class="splide__list">
+                        <li class="splide__slide">
+                          <img src="./assets/image/banner/1.jpg" alt="Slide 1" />
+                        </li>
+
+                        
+                        
+                        <li class="splide__slide">
+                          <img src="./assets/image/banner/2.jpg" alt="Slide 2" />
+                        </li>
+                        <li class="splide__slide">
+                          <img src="./assets/image/banner/3.jpg" alt="Slide 3" />
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-    <div class="containers">
-      <div class="about-sec" id="about">
-        <div class="main-about-content">
-          <div class="about-left">
+        <div class="containers">
+          <div class="about-sec" id="about">
+            <div class="main-about-content">
+              <div class="about-left">
+                <div class="border-heading">
+                  <h3 class="border-heading-text">Rólunk</h3>
+                  <img
+                    class="border-heading-image"
+                    src="./assets/image/icon/underline.png"
+                    alt="underline"
+                  />
+                </div>
+                <p class="small-wrightup">
+                  Gyógymasszőrként a szalonomban hiszem, hogy a test és lélek harmóniája a kulcs a teljes regenerálódáshoz és belső béke eléréséhez. Számomra minden kezelés egy lehetőség, hogy segítsek vendégeimnek megszabadulni a mindennapi stressztől és testi feszültségektől. Személyre szabott, szakszerű masszázstechnikáimmal arra törekszem, hogy Ön a kezelés végére felfrissülve, ellazulva érezze magát. Szalonomban a legmagasabb színvonalú ellátással, nyugodt környezetben várom Önt, hogy egy igazán pihentető és gyógyító élményben legyen része.
+                </p>
+              </div>
+
+              <div class="about-right">
+                <img src="./assets/image/icon/2.png" alt="about" />
+                
+              </div>
+              <img class="golden-leaf" src="./assets/image/icon/golden-leaf.png" alt="gold">
+            </div>
+          </div>
+        </div>
+
+        <div class="containers">
+          <div class="card-scroll" id="service">
             <div class="border-heading">
-              <h3 class="border-heading-text">About Us</h3>
+              <h3 class="border-heading-text">Szolgáltatások</h3>
               <img
                 class="border-heading-image"
                 src="./assets/image/icon/underline.png"
                 alt="underline"
               />
             </div>
-            <p class="small-wrightup">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's. Lorem Ipsum has
-              been the industry's.Lorem Ipsum is simply dummy text of the
-              printing and typesetting industry. Lorem Ipsum has been the
-              industry's. Lorem Ipsum has been the industry's.Lorem Ipsum is
-              simply dummy text of the printing and typesetting industry. Lorem
-              Ipsum has been the industry's. Lorem Ipsum has been the
-              industry's.
-            </p>
-          </div>
 
-          <div class="about-right">
-            <img src="./assets/image/icon/2.png" alt="about" />
+            <div class="service-grid">
+              <!-- Tradicionális balinéz olajos masszázs -->
+              <div class="service-card">
+                <div class="service-header">
+                  <h3>Tradicionális balinéz olajos masszázs</h3>
+                  <div class="népszerű-tag">NÉPSZERŰ</div>
+                </div>
+                <div class="service-prices">
+                  <div class="price-item">
+                    <span>60 perc</span>
+                    <span>9.000 FT</span>
+                  </div>
+                  <div class="price-item">
+                    <span>90 perc</span>
+                    <span>12.500 FT</span>
+                  </div>
+                  <div class="price-item">
+                    <span>120 perc</span>
+                    <span>16.000 FT</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Balinéz kényeztetés hölgyeknek -->
+              <div class="service-card">
+                <div class="service-header">
+                  <h3>Balinéz kényeztetés hölgyeknek</h3>
+                </div>
+                <div class="service-prices">
+                  <div class="price-item">
+                    <span>60 perc Body Scrub</span>
+                  </div>
+                  <div class="price-item">
+                    <span>60 perc balinéz masszázs krémmel</span>
+                  </div>
+                  <div class="price-item">
+                    <span>60 perc arckezelés</span>
+                  </div>
+                  <div class="price-item total">
+                    <span>180 perc</span>
+                    <span>27.900 FT</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Balinéz száraz masszázs -->
+              <div class="service-card">
+                <div class="service-header">
+                  <h3>Balinéz száraz masszázs</h3>
+                </div>
+                <div class="service-prices">
+                  <div class="price-item">
+                    <span>60 perc</span>
+                    <span>9.000 FT</span>
+                  </div>
+                  <div class="price-item">
+                    <span>90 perc</span>
+                    <span>12.500 FT</span>
+                  </div>
+                  <div class="price-item">
+                    <span>120 perc</span>
+                    <span>16.000 FT</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Hátmasszázs -->
+              <div class="service-card">
+                <div class="service-header">
+                  <h3>Hátmasszázs</h3>
+                </div>
+                <div class="service-prices">
+                  <div class="price-item">
+                    <span>30 perc</span>
+                    <span>5.000 FT</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Lávaköves masszázs -->
+              <div class="service-card">
+                <div class="service-header">
+                  <h3>Lávaköves masszázs</h3>
+                </div>
+                <div class="service-prices">
+                  <div class="price-item">
+                    <span>90 perc</span>
+                    <span>16.500 FT</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Kismama masszázs -->
+              <div class="service-card">
+                <div class="service-header">
+                  <h3>Kismama masszázs</h3>
+                </div>
+                <div class="service-prices">
+                  <div class="price-item">
+                    <span>60 perc</span>
+                    <span>9.000 FT</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Bali Body Scrub testradír olajos masszázzsal -->
+              <div class="service-card">
+                <div class="service-header">
+                  <h3>Bali Body Scrub testradír olajos masszázzsal</h3>
+                </div>
+                <div class="service-prices">
+                  <div class="price-item">
+                    <span>90 perc</span>
+                    <span>15.000 FT</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Láb, - és talpmasszázs -->
+              <div class="service-card">
+                <div class="service-header">
+                  <h3>Láb, - és talpmasszázs</h3>
+                </div>
+                <div class="service-prices">
+                  <div class="price-item">
+                    <span>30 perc</span>
+                    <span>5.000 FT</span>
+                  </div>
+                  <div class="price-item">
+                    <span>60 perc</span>
+                    <span>9.000 FT</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Váll, nyak, fej masszázs -->
+              <div class="service-card">
+                <div class="service-header">
+                  <h3>Váll, nyak, fej masszázs</h3>
+                </div>
+                <div class="service-prices">
+                  <div class="price-item">
+                    <span>30 perc</span>
+                    <span>5.000 FT</span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <div class="containers">
+          <div class="testinomial" id="testinomial">
+            <div class="border-heading">
+              <h3 class="border-heading-text">Vélemények</h3>
+              <img
+                class="border-heading-image"
+                src="./assets/image/icon/underline.png"
+                alt="underline"
+              />
+            </div>
+
+            <div class="testimonial-content">
+              <div class="testimonial-reviews">
+                <div class="testimonial-card">
+                  <div class="testimonial-header">
+                    <div class="testimonial-avatar">
+                      <i class="fa-solid fa-user"></i>
+                    </div>
+                    <div class="testimonial-info">
+                      <h4>Kovács Anna</h4>
+                      <div class="testimonial-rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="testimonial-text">
+                    "Fantasztikus élmény volt! Kristóf nagyon szakértő és figyelmes. A masszázs után teljesen felfrissültem és elmúltak a feszültségeim."
+                  </p>
+                </div>
+
+                <div class="testimonial-card">
+                  <div class="testimonial-header">
+                    <div class="testimonial-avatar">
+                      <i class="fa-solid fa-user"></i>
+                    </div>
+                    <div class="testimonial-info">
+                      <h4>Nagy Péter</h4>
+                      <div class="testimonial-rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="testimonial-text">
+                    "Hosszú évek óta küzdök hátfájással, de Kristóf balinéz masszázsa után jelentős javulást érzek. Csak ajánlani tudom!"
+                  </p>
+                </div>
+
+                <div class="testimonial-card">
+                  <div class="testimonial-header">
+                    <div class="testimonial-avatar">
+                      <i class="fa-solid fa-user"></i>
+                    </div>
+                    <div class="testimonial-info">
+                      <h4>Szabó Mária</h4>
+                      <div class="testimonial-rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="testimonial-text">
+                    "A szalon hangulata és a kezelés minősége egyaránt kiváló. Rendszeresen járok ide és mindig elégedett vagyok az eredménnyel."
+                  </p>
+                </div>
+              </div>
+
+              <div class="testimonial-form-section">
+                <h3 class="form-title">Ossza meg véleményét velünk!</h3>
+                <form class="testimonial-form" id="testimonial-form">
+                  <div class="form-group">
+                    <label for="review-name">Név</label>
+                    <input type="text" id="review-name" name="name" required placeholder="Teljes név">
+                  </div>
+                  
+                  <div class="form-group">
+                    <label for="review-email">E-mail</label>
+                    <input type="email" id="review-email" name="email" required placeholder="E-mail cím">
+                  </div>
+                  
+                  <div class="form-group">
+                    <label for="review-rating">Értékelés</label>
+                    <div class="rating-stars">
+                      <i class="fa-solid fa-star" data-rating="1"></i>
+                      <i class="fa-solid fa-star" data-rating="2"></i>
+                      <i class="fa-solid fa-star" data-rating="3"></i>
+                      <i class="fa-solid fa-star" data-rating="4"></i>
+                      <i class="fa-solid fa-star" data-rating="5"></i>
+                    </div>
+                    <input type="hidden" id="review-rating" name="rating" value="5">
+                  </div>
+                  
+                  <div class="form-group">
+                    <label for="review-text">Vélemény</label>
+                    <textarea id="review-text" name="review" rows="4" required placeholder="Írja le véleményét a szolgáltatásról..."></textarea>
+                  </div>
+                  
+                  <button type="submit" class="testimonial-submit-btn">
+                    <i class="fa-solid fa-paper-plane"></i>
+                    Vélemény küldése
+                  </button>
+                </form>
+              </div>
+            </div>
             
+            <img class="golden-leaf" src="./assets/image/icon/golden-leaf.png" alt="gold">
           </div>
+        </div>
+        
+        <div class="containers">
+          <div class="faq-section" id="faq">
+            <div class="border-heading">
+              <h3 class="border-heading-text">Gyakori Kérdések</h3>
+              <img
+                class="border-heading-image"
+                src="./assets/image/icon/underline.png"
+                alt="underline"
+              />
+            </div>
+
+            <div class="faq-container">
+              <div class="faq-item">
+                <div class="faq-question">
+                  <h4>Hogyan lehet időpontot foglalni szalonunkba?</h4>
+                  <i class="fa-solid fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                  <p>Telefonon a <strong>+36 30 123 4567</strong> telefonszámon, e-mailben a <strong>kajtark.ev@gmail.com</strong> címen, vagy személyesen a <strong>1117 Budapest, Fehérvári út 23.</strong> sz. alatt foglalhat időpontot.</p>
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <div class="faq-question">
+                  <h4>Mit kell hozni a masszázshoz?</h4>
+                  <i class="fa-solid fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                  <p>Szalonunkban papucsot, törölközőt, masszázsruhát biztosítunk. Ezenkívül nem szükséges hozni semmit. A legfontosabb, hogy ezt az időt ténylegesen önmagára szánják. A maximális felüdülés érdekében a munkát, az esetleges gondokat, negatív gondolatokat felejtse el erre az időre.</p>
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <div class="faq-question">
+                  <h4>Mik a lemondási feltételek?</h4>
+                  <i class="fa-solid fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                  <p><strong>2 órán belüli lemondás:</strong> A szolgáltatás árának 50%-a fizetendő rendelkezésre állási díjként.</p>
+                  <p><strong>1 órán belüli lemondás vagy meg nem jelenés:</strong> A szolgáltatás árának 80%-a fizetendő.</p>
+                  <p>A rendelkezésre állási díjat következő látogatása során számlázzuk vagy átutalással is rendezhető. A díj meg nem fizetése esetén a továbbiakban nem veheti igénybe szalonunk szolgáltatásait.</p>
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <div class="faq-question">
+                  <h4>Mikor és kiknek ajánlott a balinéz masszázs?</h4>
+                  <i class="fa-solid fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                  <p>A balinéz masszázs korra és nemre való tekintet nélkül ajánlott mindenkinek, aki szeretne testileg-lelkileg felüdülni és kilazulni, illetve egy pár órára megfeledkezni a hétköznapok gondjairól, valamint aki szeretne törődni magával, megőrizni frissességét, egészségét.</p>
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <div class="faq-question">
+                  <h4>Mikor nem ajánlott a masszázs?</h4>
+                  <i class="fa-solid fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                  <p><strong>Nem ajánlott az alábbi esetekben:</strong></p>
+                  <ul>
+                    <li>Bőrbetegségek</li>
+                    <li>Vírusos megbetegedések</li>
+                    <li>Daganatos megbetegedések</li>
+                    <li>Porckorongsérv</li>
+                    <li>Súlyos szívelégtelenség</li>
+                    <li>Művégtagok, protézisek (csípő, térd)</li>
+                    <li>Magas lázas állapot</li>
+                    <li>Epilepszia</li>
+                    <li>Akut gyulladás</li>
+                  </ul>
+                  <p><strong>Várandós anyáknak:</strong> Előzetes egyeztetés után lehetséges. Kérjük érkezésekor jelezze, ha valamilyen betegségben szenved.</p>
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <div class="faq-question">
+                  <h4>Lehet-e ajándékba adni masszázst?</h4>
+                  <i class="fa-solid fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                  <p>Igen, szalonunkban van lehetőség ajándékutalvány vásárlására 30-60-90-120-180 perces szolgáltatásokra, melyek <strong>60 napig érvényesek</strong>.</p>
+                  <p>Az utalványt a felhasználás előtt át kell adni a recepciósnak. Az utalványok értékéből készpénzt vissza nem tudunk adni.</p>
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <div class="faq-question">
+                  <h4>Mehetek-e a párommal, barátommal egyszerre?</h4>
+                  <i class="fa-solid fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                  <p>Igen, minden nap tudunk egyszerre több vendéget is fogadni előzetes bejelentkezés alapján!</p>
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <div class="faq-question">
+                  <h4>Ki végzi a masszázst?</h4>
+                  <i class="fa-solid fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                  <p>Szalonunkban <strong>Kajtár Kristóf</strong> szakképzett, több éves gyakorlattal rendelkező gyógymasszőr végzi a kezeléseket. A balinéz masszázstechnika mellett egyéb wellness szolgáltatásokban is jártas.</p>
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <div class="faq-question">
+                  <h4>Fontos tudnivalók és vezetőségi kérések</h4>
+                  <i class="fa-solid fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                  <p><strong>Érkezés:</strong> A lefoglalt időpontja előtt 5 perccel korábban érkezzen meg.</p>
+                  <p><strong>Késés:</strong> 10-15 percen túli késés esetén nem tudjuk garantálni a teljes lefoglalt időtartamot.</p>
+                  <p><strong>Lemondás:</strong> Lehetőleg a masszázsa előtt legkésőbb 2 órával hamarabb tegye meg.</p>
+                  <p><strong>Mobiltelefon:</strong> Kérjük a szalonunkban némítsa le, és masszázsa alatt lehetőség szerint ne telefonáljon.</p>
+                  <p><strong>Fontos:</strong> Szalonunk tisztán wellness szolgáltatásokat nyújt, minden más jellegű kérést kategorikusan elutasítunk.</p>
+                </div>
+              </div>
+            </div>
+            
+            <img class="golden-leaf" src="./assets/image/icon/golden-leaf.png" alt="gold">
+          </div>
+        </div>
+        <div class="containers">
+          <div class="glry" id="gallery">
+            <div class="border-heading">
+              <h3 class="border-heading-text">Galéria</h3>
+              <img
+                class="border-heading-image"
+                src="./assets/image/icon/underline.png"
+                alt="underline"
+              />
+            </div>
+
+            <div class="glry-main">
+              <img class="leaf" src="./assets/image/icon/leaf.png" alt="icon" />
+              
+              <div class="glry-item">
+                <div class="glry-item-img">
+                  <img src="./assets/image/banner/4.jpg" alt="Masszázs szoba 1">
+                </div>
+                <div class="glry-item-overlay">
+                  <div class="glry-item-icon">
+                    <i class="fa-solid fa-spa"></i>
+                  </div>
+                  <div class="glry-item-text">Masszázs szoba</div>
+                </div>
+              </div>
+              
+              <div class="glry-item">
+                <div class="glry-item-img">
+                  <img src="./assets/image/banner/3.jpg" alt="Masszázs szoba 2">
+                </div>
+                <div class="glry-item-overlay">
+                  <div class="glry-item-icon">
+                    <i class="fa-solid fa-leaf"></i>
+                  </div>
+                  <div class="glry-item-text">Wellness környezet</div>
+                </div>
+              </div>
+              
+              <div class="glry-item">
+                <div class="glry-item-img">
+                  <img src="./assets/image/banner/2.jpg" alt="Wellness környezet">
+                </div>
+                <div class="glry-item-overlay">
+                  <div class="glry-item-icon">
+                    <i class="fa-solid fa-seedling"></i>
+                  </div>
+                  <div class="glry-item-text">Pihenés & relaxáció</div>
+                </div>
+              </div>
+              
+              <div class="glry-item">
+                <div class="glry-item-img">
+                  <img src="./assets/image/banner/1.jpg" alt="Relaxáció">
+                </div>
+                <div class="glry-item-overlay">
+                  <div class="glry-item-icon">
+                    <i class="fa-solid fa-heart"></i>
+                  </div>
+                  <div class="glry-item-text">Testi-lelki harmónia</div>
+                </div>
+              </div>
+              
+              <div class="glry-item">
+                <div class="glry-item-img">
+                  <img src="./assets/image/banner/3.jpg" alt="Pihenés">
+                </div>
+                <div class="glry-item-overlay">
+                  <div class="glry-item-icon">
+                    <i class="fa-solid fa-hands-holding-circle"></i>
+                  </div>
+                  <div class="glry-item-text">Szakértő kezelés</div>
+                </div>
+              </div>
+              
+              <div class="glry-item">
+                <div class="glry-item-img">
+                  <img src="./assets/image/banner/2.jpg" alt="Wellness élmény">
+                </div>
+                <div class="glry-item-overlay">
+                  <div class="glry-item-icon">
+                    <i class="fa-solid fa-zen"></i>
+                  </div>
+                  <div class="glry-item-text">Teljes wellness élmény</div>
+                </div>
+              </div>
+            </div>
+           
+          </div>
+        </div>
+
+       <div class="containers">
+        <div class="footer" id="contact">
           <img class="golden-leaf" src="./assets/image/icon/golden-leaf.png" alt="gold">
-        </div>
-      </div>
-    </div>
-
-    <div class="containers">
-      <div class="card-scroll" id="service">
-        <div class="border-heading">
-          <h3 class="border-heading-text">Services</h3>
-          <img
-            class="border-heading-image"
-            src="./assets/image/icon/underline.png"
-            alt="underline"
-          />
-        </div>
-
-        <div class="scroll-contents">
-          <div class="main-card-garden splide splide-new">
-            <div class="splide__track">
-              <ul class="splide__list" >
-                <li class="splide__slide">
-                  <div class="card">
-                    <div class="card-content">
-                      <div class="card-img"><img src="./assets/image/banner/1.jpg" alt="img"></div>
-                      <h3>Head Massage</h3>
-                      <p>Grand Opening Special Offer is valid from 20th august to 30th december 2023</p>
-                     <div class="price">
-                      <h2 class="befour">500</h2>
-                       <h2>200</h2>
-                     </div>
-                      <button>Book Now</button>
-                    </div>
-        
-                  </div>
-                </li>
-
-                <li class="splide__slide">
-                  <div class="card">
-                    <div class="card-content">
-                      <div class="card-img"><img src="./assets/image/banner/1.jpg" alt="img"></div>
-                      <h3>Head Massage</h3>
-                      <p>Grand Opening Special Offer is valid from 20th august to 30th december 2023</p>
-                     <div class="price">
-                      <h2 class="befour">500</h2>
-                       <h2>200</h2>
-                     </div>
-                      <button>Book Now</button>
-                    </div>
-        
-                  </div>
-                </li>
-
-                <li class="splide__slide">
-                  <div class="card">
-                    <div class="card-content">
-                      <div class="card-img"><img src="./assets/image/banner/1.jpg" alt="img"></div>
-                      <h3>Head Massage</h3>
-                      <p>Grand Opening Special Offer is valid from 20th august to 30th december 2023</p>
-                     <div class="price">
-                      <h2 class="befour">500</h2>
-                       <h2>200</h2>
-                     </div>
-                      <button>Book Now</button>
-                    </div>
-        
-                  </div>
-                </li>
-
-                <li class="splide__slide">
-                  <div class="card">
-                    <div class="card-content">
-                      <div class="card-img"><img src="./assets/image/banner/1.jpg" alt="img"></div>
-                      <h3>Head Massage</h3>
-                      <p>Grand Opening Special Offer is valid from 20th august to 30th december 2023</p>
-                     <div class="price">
-                      <h2 class="befour">500</h2>
-                       <h2>200</h2>
-                     </div>
-                      <button>Book Now</button>
-                    </div>
-        
-                  </div>
-                </li>
-
-                <li class="splide__slide">
-                  <div class="card">
-                    <div class="card-content">
-                      <div class="card-img"><img src="./assets/image/banner/1.jpg" alt="img"></div>
-                      <h3>Head Massage</h3>
-                      <p>Grand Opening Special Offer is valid from 20th august to 30th december 2023</p>
-                     <div class="price">
-                      <h2 class="befour">500</h2>
-                       <h2>200</h2>
-                     </div>
-                      <button>Book Now</button>
-                    </div>
-        
-                  </div>
-                </li>
-
-                <li class="splide__slide">
-                  <div class="card">
-                    <div class="card-content">
-                      <div class="card-img"><img src="./assets/image/banner/1.jpg" alt="img"></div>
-                      <h3>Head Massage</h3>
-                      <p>Grand Opening Special Offer is valid from 20th august to 30th december 2023</p>
-                     <div class="price">
-                      <h2 class="befour">500</h2>
-                       <h2>200</h2>
-                     </div>
-                      <button>Book Now</button>
-                    </div>
-        
-                  </div>
-                </li>
-               
-
-
-              </ul>
+          
+          <!-- Header Section with Call to Action -->
+          <div class="footer-header">
+            <h2 class="footer-title">Foglaljon időpontot még ma!</h2>
+            <p class="footer-subtitle">Tapasztalja meg a balinéz masszázs csodálatos hatását</p>
+            <div class="footer-cta-buttons">
+              <a href="#book" data-fancybox data-src="#dialog-content" class="cta-btn primary">
+                <i class="fa-solid fa-calendar-plus"></i>
+                Azonnali foglalás
+              </a>
+              <a href="tel:+36301234567" class="cta-btn secondary">
+                <i class="fa-solid fa-phone"></i>
+                Hívjon most
+              </a>
             </div>
           </div>
 
-          
+          <div class="main-footer">
+            <div class="left-footer">
+              <div class="footer-logo">
+                <img src="./assets/image/logo/Aroved Wellness.png" alt="logo">
+                <div class="logo-content">
+                  <h1 class="logo-name">Kajtár Kristóf</h1>
+                  <p class="logo-slogan">wellness studio & spa</p>
+                </div>
+              </div>
+              <p class="paragraph-footer">Szakértő gyógymasszőr szolgáltatások a szív központjában</p>
+              
+              <!-- Contact Info Cards -->
+              <div class="contact-cards">
+                <div class="contact-card">
+                  <div class="contact-icon">
+                    <i class="fa-solid fa-location-dot"></i>
+                  </div>
+                  <div class="contact-info">
+                    <span class="contact-label">Cím</span>
+                    <span class="contact-value">1117 Budapest, Fehérvári út 23.</span>
+                  </div>
+                </div>
+                
+                <div class="contact-card">
+                  <div class="contact-icon">
+                    <i class="fa-solid fa-phone"></i>
+                  </div>
+                  <div class="contact-info">
+                    <span class="contact-label">Telefon</span>
+                    <span class="contact-value">+36 30 123 4567</span>
+                  </div>
+                </div>
+                
+                <div class="contact-card">
+                  <div class="contact-icon">
+                    <i class="fa-solid fa-envelope"></i>
+                  </div>
+                  <div class="contact-info">
+                    <span class="contact-label">Email</span>
+                    <span class="contact-value">kajtark.ev@gmail.com</span>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Enhanced Social Icons -->
+              <div class="social-section">
+                <h4 class="social-title">Kövessen minket</h4>
+                <div class="social-icons">
+                  <a href="https://www.facebook.com/kajtar.kristof?locale=hu_HU" target="_blank" class="social-icon facebook">
+                    <i class="fa-brands fa-facebook-f"></i>
+                    <span class="social-label">Facebook</span>
+                  </a>
+                  <a href="https://www.instagram.com/kajtar.k?igsh=cGxtamFjNWZ5bGw2" target="_blank" class="social-icon instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                    <span class="social-label">Instagram</span>
+                  </a>
+                </div>
+              </div>
+            </div>
 
-        </div>
-      </div>
-    </div>
-    <div class="containers">
-      <div class="testinomial" id="testinomial"></div>
-    </div>
-    <div class="containers">
-      <div class="glry" id="gallery">
-        <div class="border-heading">
-          <h3 class="border-heading-text">Gallery</h3>
-          <img
-            class="border-heading-image"
-            src="./assets/image/icon/underline.png"
-            alt="underline"
-          />
-        </div>
+            <div class="middle-footer">
+              <div class="border-heading">
+                <h3 class="border-heading-text">Gyors Linkek</h3>
+                <img
+                  class="border-heading-image"
+                  src="./assets/image/icon/underline.png"
+                  alt="underline"
+                />
+              </div>
 
-        <div class="glry-main">
-          <img class="leaf" src="./assets/image/icon/leaf.png" alt="icon" />
-          <div class="glry-con">
-            <a href="./assets/image/banner/4.jpg" data-fancybox="gallery">
-              <div class="glry-con-img"><img src="./assets/image/banner/4.jpg" alt="text"></div>
-            </a> 
-            <a href="./assets/image/banner/3.jpg" data-fancybox="gallery">
-              <div class="glry-con-img"><img src="./assets/image/banner/3.jpg" alt="text"></div>
-            </a> 
-            <a href="./assets/image/banner/2.jpg" data-fancybox="gallery">
-              <div class="glry-con-img"><img src="./assets/image/banner/2.jpg" alt="text"></div>
-            </a> 
-           
+              <div class="quick-links">
+                <a href="#about" class="quick-link">
+                  <i class="fa-solid fa-angles-right"></i>
+                  <span>Rólunk</span>
+                </a>
+                <a href="#service" class="quick-link">
+                  <i class="fa-solid fa-angles-right"></i>
+                  <span>Szolgáltatások</span>
+                </a>
+                <a href="#gallery" class="quick-link">
+                  <i class="fa-solid fa-angles-right"></i>
+                  <span>Galéria</span>
+                </a>
+                <a href="#testinomial" class="quick-link">
+                  <i class="fa-solid fa-angles-right"></i>
+                  <span>Vélemények</span>
+                </a>
+                <a href="#faq" class="quick-link">
+                  <i class="fa-solid fa-angles-right"></i>
+                  <span>GYIK</span>
+                </a>
+                <a href="#contact" class="quick-link">
+                  <i class="fa-solid fa-angles-right"></i>
+                  <span>Kapcsolat</span>
+                </a>
+              </div>
+            </div>
+            
+            <div class="right-footer">
+              <div class="border-heading">
+                <h3 class="border-heading-text">Helyszín</h3>
+                <img
+                  class="border-heading-image"
+                  src="./assets/image/icon/underline.png"
+                  alt="underline"
+                />
+              </div>
+
+              <div class="map-container">
+                <div class="map">
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2696.3105460859656!2d19.045769015641837!3d47.47731997917636!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4741dda53f56f87b%3A0x4f5a9a4b8cccc1cf!2zQnVkYXBlc3QsIEZlaMOpcnbDoXJpIMO6dCAyMywgMTExNw!5e0!3m2!1shu!2shu!4v1635789456789!5m2!1shu!2shu" width="100%" height="230" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="map-overlay">
+                  <div class="location-info">
+                    <i class="fa-solid fa-map-marker-alt"></i>
+                    <span>Könnyen megközelíthető</span>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="glry-con">
-            <a href="./assets/image/banner/1.jpg" data-fancybox="gallery">
-              <div class="glry-con-img"><img src="./assets/image/banner/1.jpg" alt="text"></div>
-            </a> 
-            <a href="./assets/image/banner/3.jpg" data-fancybox="gallery">
-              <div class="glry-con-img"><img src="./assets/image/banner/3.jpg" alt="text"></div>
-            </a> 
-           
-           
-          </div>
-          <div class="glry-con">
-            <a href="./assets/image/banner/1.jpg" data-fancybox="gallery">
-              <div class="glry-con-img"><img src="./assets/image/banner/1.jpg" alt="text"></div>
-            </a> 
-            <a href="./assets/image/banner/3.jpg" data-fancybox="gallery">
-              <div class="glry-con-img"><img src="./assets/image/banner/3.jpg" alt="text"></div>
-            </a> 
-            <a href="./assets/image/banner/2.jpg" data-fancybox="gallery">
-              <div class="glry-con-img"><img src="./assets/image/banner/2.jpg" alt="text"></div>
-            </a> 
-           
-          </div>
-        
         </div>
-       
-      </div>
-    </div>
+       </div>
 
- <div class="containers">
-  <div class="footer" id="contact">
-    <img class="golden-leaf" src="./assets/image/icon/golden-leaf.png" alt="gold">
-    <div class="main-footer">
-<div class="left-footer">
-<div class="footer-logo">
-  <img src="./assets/image/logo/Aroved Wellness.png" alt="logo">
-  <div class="logo-content">
-    <h1 class="logo-name">aroved</h1>
-    <p class="logo-slogan">wellness studio & spa</p>
-   </div>
-</div>
-<p class="paragraph-footer">Plot no 117, Sector 4, Niladrivihar, Patia,Chandrasekharpur, Bhubaneswar, Khurdha, Odisha - 754213</p>
-<p class="mobile-footer"><i class="fa-solid fa-phone"></i> +91 6372 917 973</p>
-<p class="email-footer"><i class="fa-solid fa-envelope"></i> care@arovedwellness.com</p>
- <div class="social-icons">
-  <i class="fa-brands fa-facebook-f"></i>
-  <i class="fa-brands fa-instagram"></i>
-  <i class="fa-brands fa-youtube"></i>
-  <i class="fa-brands fa-twitter"></i>
-</div>
-</div>
-
-<div class="middle-footer">
-  <div class="border-heading">
-    <h3 class="border-heading-text">Quik Links</h3>
-    <img
-      class="border-heading-image"
-      src="./assets/image/icon/underline.png"
-      alt="underline"
-    />
-  </div>
-
-  <ul class="middle-footer-ul" type="none">
-    <li class="middle-footer-li"><i class="fa-solid fa-angles-right"></i>Feedback</li>
-    <li class="middle-footer-li"><i class="fa-solid fa-angles-right"></i>Quik Book</li>
-    <li class="middle-footer-li"><i class="fa-solid fa-angles-right"></i>Careers</li>
-    <li  class="middle-footer-li"><i class="fa-solid fa-angles-right"></i>Contacts</li>
-    <li  class="middle-footer-li"><i class="fa-solid fa-angles-right"></i>Privacy Policy</li>
-    <li  class="middle-footer-li"><i class="fa-solid fa-angles-right"></i>Refund Policy</li>
-    <li  class="middle-footer-li"><i class="fa-solid fa-angles-right"></i>Terms & Conditions</li>
-  </ul>
-
-</div>
-<div class="right-footer">
-  <div class="border-heading">
-    <h3 class="border-heading-text">Location</h3>
-    <img
-      class="border-heading-image"
-      src="./assets/image/icon/underline.png"
-      alt="underline"
-    />
-  </div>
-
-  <div class="map">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3740.820146174654!2d85.803122670744!3d20.349047369109126!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a1908e025984c55%3A0xee1fcd1f11e55141!2sDLF%20CYBER%20CITY!5e0!3m2!1sen!2sin!4v1700567236539!5m2!1sen!2sin" width="100%" height="230" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-  </div>
-</div>
-
-    </div>
-  </div>
-  
- </div>
 <div class="real-footer">
-   <p class="copyright">© 2023 Aroved Wellness. All Rights Reserved.</p>
-   <p class="devloper">This template is made with<i class="fa-solid fa-heart fa-beat-fade"></i>by Prabhusagar. </p>
+   <p class="copyright">© 2025 Kajtar Kristof Wellness. Minden jog fenntartva.</p>
+   <a href="https://pal-martin-portfolio.vercel.app/"><p class="devloper">Ezt az oldalt tervezte és készítette<i class="fa-solid fa-spa fa-beat-fade"></i>Pál Martin. </p></a>
 </div>
 
 <div class="whatsapp-float">
-  <p class="whatsapp-float-p">For Faster Booking</p>
+  <p class="whatsapp-float-p">Gyors foglaláshoz</p>
   <i class="fab fa-whatsapp"></i>
 </div>
 
 
 <div class="subscribe" id="dialog-content" style="display:none;max-width:500px;">
-  <p>Booking Form</p>
-  <input placeholder="Full Name" class="subscribe-input" name="email" type="text">
+  <p>Foglalási űrlap</p>
+  <input placeholder="Teljes név" class="subscribe-input" name="email" type="text">
   <br>
-  <input placeholder="Your Phone Number" class="subscribe-input" name="Number" type="number">
+  <input placeholder="Telefonszám" class="subscribe-input" name="Number" type="number">
   <br>
-  <input placeholder="Your e-mail" class="subscribe-input" name="email" type="email">
+  <input placeholder="E-mail cím" class="subscribe-input" name="email" type="email">
   <br>
-  <div class="submit-btn">SUBMIT</div>
+  <div class="submit-btn">KÜLDÉS</div>
 </div>
 
 
@@ -407,37 +827,12 @@
   <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
   <script src="https://www.statebotanicalgardenodisha.org/demo/asset/js/ScrollTrigger.min.js"></script>
   <script src="https://www.statebotanicalgardenodisha.org/demo/asset/js/gsap.min.js"></script>
-  <script src="https://projects.allindiaonline.in/bput/asset/js/jquery-3.6.0.min.js"></script>
+  <script src="./assets/javascript/jquery-3.6.0.min.js"></script>
   <script src="https://projects.allindiaonline.in/bput/asset/js/fancybox.umd.js"></script>
   <script src="./assets/javascript/main.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/TextPlugin.min.js"></script>
 
   <script src="./assets/javascript/splide.min.js"></script>
   <script src="./assets/javascript/animation.js"></script>
-  <script>
-    Fancybox.bind('[data-fancybox="gallery"]', { 
-      Toolbar: {
-        display: {
-          left: ["infobar"],
-          middle: [
-            // "prev",
-            "zoomIn",
-            "zoomOut",
-            // "toggle1to1",
-            // "rotateCCW",
-            // "rotateCW",
-            // "flipX",
-            // "flipY",
-            // "next",
-          ],
-          right: ["slideshow","fullscreen","download", "thumbs","close"],
-        },
-      },
-     Thumbs: {
-        showOnStart: true,
-        // type: "classic",
-        type: "modern",
-      },
-      });    
-  </script>
+  <!-- Gallery Fancybox functionality has been removed -->
 </html>

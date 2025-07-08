@@ -1,3 +1,254 @@
+/* Horizontal scrolling fix for all screen sizes */
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+/* Mobilra specifikus fixek */
+@media (max-width: 768px) {
+    /* Navbar padding csökkentése */
+    .navbar {
+        padding: 1rem 10px !important;
+    }
+    
+    /* Banner section padding fix */
+    .banner-sec {
+        width: 100% !important;
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+    }
+    
+    /* Footer width fix */
+    .footer {
+        width: 100% !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+    
+    /* Footer CTA buttons responsive */
+    .footer-cta-buttons {
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+    }
+    
+    .cta-btn {
+        width: 100%;
+        max-width: 280px;
+        justify-content: center;
+        padding: 12px 25px;
+        font-size: 14px;
+    }
+    
+    .cta-btn i {
+        font-size: 16px;
+    }
+    
+    /* Containers width fix */
+    .containers {
+        width: 100% !important;
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+    }
+    
+    /* Main footer padding fix */
+    .main-footer {
+        padding: 0 10px !important;
+    }
+    
+    /* Contact section padding fix */
+    .contact-sec {
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+    }
+    
+    /* Service grid padding fix */
+    .service-grid {
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+    }
+    
+    /* Testimonial section padding fix */
+    .testinomial {
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+    }
+    
+    /* FAQ section padding fix */
+    .faq-section {
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+    }
+    
+    /* Gallery section padding fix */
+    .glry {
+        width: 100%;
+        margin: 40px auto;
+        padding: 20px 10px;
+        text-align: center;
+    }
+    
+    .glry .border-heading {
+        text-align: center !important;
+        width: 100% !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+    
+    .glry .border-heading-text {
+        font-size: 26px;
+        text-align: center !important;
+    }
+    
+    .glry .border-heading-image {
+        margin: 0 auto !important;
+        display: block !important;
+        text-align: center !important;
+    }
+    
+    .glry-main {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        position: relative;
+    }
+    
+    .glry .leaf {
+        width: 150px;
+        right: 50%;
+        transform: translateX(50%);
+        top: -60px;
+        opacity: 0.2;
+    }
+    
+    .glry-item {
+        max-width: 100%;
+    }
+    
+    .glry-item-img {
+        height: 200px;
+    }
+    
+    .glry-item-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+    }
+    
+    .glry-item-text {
+        font-size: 14px;
+    }
+    
+    /* About section padding fix */
+    .about-sec {
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+    }
+}
+
+@media (max-width: 600px) {
+    /* Még kisebb padding még kisebb képernyőkre */
+    .navbar {
+        padding: 0.5rem 5px !important;
+    }
+    
+    .banner-sec, .containers, .contact-sec, .service-grid, 
+    .testinomial, .faq-section, .about-sec {
+        padding-left: 5px !important;
+        padding-right: 5px !important;
+    }
+    
+    .footer {
+        padding: 25px 5px !important;
+    }
+    
+    /* Footer CTA buttons for small screens */
+    .footer-title {
+        font-size: 24px !important;
+    }
+    
+    .footer-subtitle {
+        font-size: 14px !important;
+    }
+    
+    .cta-btn {
+        padding: 10px 20px;
+        font-size: 13px;
+        max-width: 250px;
+    }
+    
+    .cta-btn i {
+        font-size: 14px;
+    }
+    
+    /* Gallery for small screens */
+    .glry {
+        padding: 15px 5px;
+        margin: 30px auto;
+        text-align: center;
+    }
+    
+    .glry .border-heading {
+        text-align: center !important;
+        width: 100% !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+    
+    .glry .border-heading-text {
+        font-size: 22px;
+        text-align: center !important;
+    }
+    
+    .glry .border-heading-image {
+        margin: 0 auto !important;
+        display: block !important;
+        text-align: center !important;
+    }
+    
+    .glry-main {
+        gap: 12px;
+        position: relative;
+    }
+    
+    .glry .leaf {
+        width: 120px;
+        right: 50%;
+        transform: translateX(50%);
+        top: -80px;
+        opacity: 0.2;
+    }
+    
+    .glry-item-img {
+        height: 180px;
+    }
+    
+    .glry-item-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+    }
+    
+    .glry-item-text {
+        font-size: 13px;
+    }
+}
+
+/* Eredeti responsive stílusok */
+.wrapper {
+    max-width: 1920px;
+    margin: 0 auto;
+    width: 100%;
+    overflow-x: hidden;
+}
+
 @media (min-width: 1920px) {
     .containers {
       max-width: 1920px;
@@ -78,6 +329,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  text-align: center;
   /* border: 1px solid green; */
 }
 .small-wrightup {
@@ -102,7 +354,12 @@
   border-radius: 10px;
 }
 .glry .border-heading {
-  width: 75%;
+  width: 100% !important;
+  text-align: center !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
 }
 .glry-con .glry-con-img {
   width: 110px;
@@ -120,6 +377,7 @@
   align-items: flex-start;
   /* border: 1px solid red; */
   flex-direction: column;
+  padding: 20px 0; /* Extra padding a contact section teljes megjelenítéséhez */
 }
 .left-footer {
   text-align: center;
@@ -157,7 +415,7 @@
   width: 85%;
   margin: auto;
   border-radius: 10px;
-  padding: 20px 10px 10px 10px;
+  padding: 80px 10px 60px 10px; /* Növelt padding felülről és alulról a contact section teljes megjelenítéséhez */
   border: 2px solid var(--active-color);
 }
 .footer .border-heading {
@@ -189,4 +447,413 @@
   width: 90%;
   margin: 20px auto 0 auto;
 }
+
+/* Testimonial Section Mobile Styles */
+.testinomial {
+  width: 95%;
+  margin: 30px auto;
+  padding: 20px 0;
+}
+
+.testinomial .border-heading {
+  width: 80%;
+}
+
+.testimonial-content {
+  flex-direction: column;
+  gap: 25px;
+}
+
+.testimonial-card {
+  padding: 18px;
+  margin: 0 5px;
+}
+
+.testimonial-avatar {
+  width: 35px;
+  height: 35px;
+  font-size: 14px;
+}
+
+.testimonial-info h4 {
+  font-size: 14px;
+}
+
+.testimonial-text {
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.testimonial-form-section {
+  padding: 18px;
+  margin: 0 5px;
+}
+
+.form-title {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 8px 10px;
+  font-size: 13px;
+}
+
+.testimonial-submit-btn {
+  padding: 10px 20px;
+  font-size: 13px;
+}
+
+.testinomial .golden-leaf {
+  width: 20%;
+  top: -40px;
+  right: -20px;
+}
+
+/* FAQ Section Mobile Styles */
+.faq-section {
+  width: 95%;
+  margin: 30px auto;
+  padding: 20px 0;
+}
+
+.faq-section .border-heading {
+  width: 80%;
+}
+
+.faq-container {
+  margin: 0 5px;
+}
+
+.faq-item {
+  margin-bottom: 12px;
+}
+
+.faq-question {
+  padding: 15px 18px;
+}
+
+.faq-question h4 {
+  font-size: 14px;
+  padding-right: 12px;
+}
+
+.faq-question i {
+  font-size: 12px;
+}
+
+.faq-answer {
+  padding: 0 18px;
+}
+
+.faq-item.active .faq-answer {
+  padding: 18px;
+}
+
+.faq-answer p {
+  font-size: 13px;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.faq-answer ul {
+  padding-left: 15px;
+  margin: 10px 0;
+}
+
+.faq-answer li {
+  font-size: 13px;
+  margin: 5px 0;
+}
+
+.faq-section .golden-leaf {
+  width: 20%;
+  bottom: -50px;
+  left: -25px;
+}
+}
+
+/* Footer responsive styles */
+@media (max-width: 768px) {
+    .footer {
+        width: 95%;
+        padding: 30px 15px;
+        margin: 20px auto;
+    }
+    
+    .footer-header {
+        margin-bottom: 30px;
+        padding: 20px 0;
+    }
+    
+    .footer-title {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+    
+    .footer-subtitle {
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+    
+    .footer-cta-buttons {
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+    }
+    
+    .cta-btn {
+        width: 100%;
+        max-width: 280px;
+        justify-content: center;
+        padding: 12px 25px;
+    }
+    
+    .main-footer {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .left-footer, .middle-footer, .right-footer {
+        max-width: 100%;
+        width: 100%;
+    }
+    
+    .footer-logo {
+        justify-content: center;
+        text-align: center;
+    }
+    
+    .footer-logo img {
+        width: 50px;
+    }
+    
+    .paragraph-footer {
+        text-align: center;
+        font-size: 14px;
+    }
+    
+    .contact-cards {
+        margin: 20px 0;
+    }
+    
+    .contact-card {
+        padding: 12px;
+    }
+    
+    .contact-icon {
+        width: 35px;
+        height: 35px;
+        font-size: 14px;
+    }
+    
+    .contact-value {
+        font-size: 13px;
+    }
+    
+    .social-section {
+        text-align: center;
+        margin-top: 20px;
+    }
+    
+    .social-icons {
+        justify-content: center;
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .social-icon {
+        padding: 10px 15px;
+        font-size: 12px;
+        width: 100%;
+        max-width: 100%;
+        justify-content: center;
+    }
+    
+    .social-icon i {
+        font-size: 14px;
+    }
+    
+    /* Contact card text center alignment on mobile */
+    .contact-info {
+        text-align: center;
+        align-items: center;
+    }
+    
+    .contact-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px;
+    }
+    
+    .contact-icon {
+        margin-bottom: 8px;
+    }
+    
+    .footer .border-heading-text {
+        font-size: 20px;
+    }
+    
+    .quick-links {
+        gap: 8px;
+    }
+    
+    .quick-link {
+        padding: 10px 12px;
+        font-size: 14px;
+    }
+    
+    .map-container {
+        border-radius: 10px;
+    }
+    
+    .map {
+        border-radius: 10px;
+    }
+    
+    .map iframe {
+        height: 200px;
+    }
+    
+    .map-overlay {
+        top: 10px;
+        left: 10px;
+        padding: 6px 12px;
+    }
+    
+    .location-info {
+        font-size: 11px;
+    }
+    
+    .real-footer {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+        padding-top: 15px;
+    }
+    
+    .footer .golden-leaf {
+        width: 20%;
+        top: -50px;
+        right: -30px;
+    }
+}
+
+@media (max-width: 600px) {
+    .footer {
+        width: 95%;
+        padding: 25px 10px;
+        border-radius: 15px;
+    }
+    
+    .footer-header {
+        margin-bottom: 25px;
+        padding: 15px 0;
+    }
+    
+    .footer-title {
+        font-size: 22px;
+    }
+    
+    .footer-subtitle {
+        font-size: 14px;
+    }
+    
+    .main-footer {
+        gap: 25px;
+    }
+    
+    .contact-card {
+        padding: 10px;
+    }
+    
+    .contact-icon {
+        width: 30px;
+        height: 30px;
+        font-size: 12px;
+    }
+    
+    .contact-info {
+        gap: 1px;
+    }
+    
+    .contact-label {
+        font-size: 11px;
+    }
+    
+    .contact-value {
+        font-size: 12px;
+    }
+    
+    .social-title {
+        font-size: 16px;
+    }
+    
+    .social-icons {
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .social-icon {
+        padding: 8px 12px;
+        width: 100%;
+        max-width: 100%;
+        justify-content: center;
+    }
+    
+    .social-icon i {
+        font-size: 12px;
+    }
+    
+    .social-label {
+        font-size: 12px;
+    }
+    
+    /* Contact card improvements for small screens */
+    .contact-info {
+        text-align: center;
+        align-items: center;
+    }
+    
+    .contact-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 12px;
+    }
+    
+    .contact-icon {
+        margin-bottom: 6px;
+    }
+    
+    .footer .border-heading-text {
+        font-size: 18px;
+    }
+    
+    .quick-link {
+        padding: 8px 10px;
+        font-size: 13px;
+    }
+    
+    .map iframe {
+        height: 180px;
+    }
+    
+    .footer .golden-leaf {
+        width: 25%;
+        top: -30px;
+        right: -20px;
+    }
+}
+
+/* Medium screens - tablet */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .glry-main {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 18px;
+    }
+    
+    .glry-item-img {
+        height: 220px;
+    }
 }
