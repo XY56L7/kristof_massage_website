@@ -1,8 +1,7 @@
-# Aroved Wellness - Massage Therapy Website 🌿
+# Kajtar Kristof - Massage Therapy Website 🌿
 
 A modern, responsive website for **Kajtár Kristóf**, a professional massage therapist, built with clean HTML, CSS, and JavaScript. The site provides an elegant showcase of wellness services with advanced animations and mobile-optimized design.
 
-![Website Preview](https://arovedwellness.com)
 
 ## 🌟 Overview
 
@@ -299,7 +298,6 @@ This is a custom business website. For modifications or improvements:
 
 ## 📞 Support & Contact
 
-- **Website**: [arovedwellness.com](https://arovedwellness.com)
 - **Business Email**: Contact via website contact form
 - **WhatsApp**: Integrated button on website
 
