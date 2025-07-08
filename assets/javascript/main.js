@@ -128,10 +128,10 @@ document.addEventListener('DOMContentLoaded', function() {
         hamburger.classList.toggle('active');
         mobileNav.classList.toggle('active');
         
-        // A görgetés letiltása eltávolítva a mobilon való görgetési probléma megoldása érdekében
-        // Csak a menü pozíciót és z-indexet használjuk
+        // Teljesen eltávolítom a scroll blokkolást
+        // A menü overlay-ként működik, nem blokkolja a háttér scrollt
         if (mobileNav.classList.contains('active')) {
-            // Menü megnyitása - nem blokkolom a görgetést
+            // Menü megnyitása - scroll engedélyezve marad
             body.classList.add('menu-open');
         } else {
             // Menü bezárása
@@ -184,41 +184,81 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// Horizontal scrolling fix
+// Horizontal scrolling fix - Javított verzió mobilos scroll problémák nélkül
 document.addEventListener('DOMContentLoaded', function() {
-    // Disable horizontal scrolling
+    // Csak horizontális scrolling letiltása, függőleges megtartása
     document.body.style.overflowX = 'hidden';
     document.documentElement.style.overflowX = 'hidden';
     
-    // Fix viewport width issues
+    // Fix viewport width issues - csak desktop-on
     function fixViewportWidth() {
-        const elements = document.querySelectorAll('*');
-        elements.forEach(element => {
-            if (element.scrollWidth > window.innerWidth) {
-                element.style.maxWidth = '100%';
-                element.style.overflowX = 'hidden';
-            }
-        });
+        // Csak akkor futtatjuk, ha nem mobil eszköz
+        if (window.innerWidth > 768) {
+            const elements = document.querySelectorAll('*');
+            elements.forEach(element => {
+                if (element.scrollWidth > window.innerWidth) {
+                    element.style.maxWidth = '100%';
+                    element.style.overflowX = 'hidden';
+                }
+            });
+        }
     }
     
-    // Run on load and resize
+    // Run on load and resize - csak desktop-on
     fixViewportWidth();
     window.addEventListener('resize', fixViewportWidth);
     
-    // Prevent horizontal scroll on touch devices
+    // Javított touch kezelés - csak horizontális swipe-ok blokkolása
     let startX = 0;
+    let startY = 0;
+    let isHorizontalSwipe = false;
+    
     document.addEventListener('touchstart', function(e) {
         startX = e.touches[0].clientX;
+        startY = e.touches[0].clientY;
+        isHorizontalSwipe = false;
     });
     
     document.addEventListener('touchmove', function(e) {
         const currentX = e.touches[0].clientX;
+        const currentY = e.touches[0].clientY;
         const diffX = Math.abs(currentX - startX);
+        const diffY = Math.abs(currentY - startY);
         
-        if (diffX > 10) { // If horizontal swipe
+        // Csak akkor blokkoljuk, ha egyértelműen horizontális swipe
+        if (diffX > diffY && diffX > 30) {
+            isHorizontalSwipe = true;
             e.preventDefault();
         }
-    }, { passive: false });
+        // Ha függőleges swipe, hagyjuk futni
+    }, { passive: false     });
+});
+
+// Extra mobilos scroll javítás - biztonsági megoldás
+document.addEventListener('DOMContentLoaded', function() {
+    // Mobilos eszközökön biztosítjuk, hogy a scroll mindig működjön
+    if (window.innerWidth <= 768) {
+        // Minden scroll-blokkoló CSS felülírása
+        document.body.style.overflowY = 'visible';
+        document.documentElement.style.overflowY = 'scroll';
+        
+        // Ha valaki JavaScript-ből blokkolná a scrollt, ezt megakadályozzuk
+        const originalPreventDefault = Event.prototype.preventDefault;
+        Event.prototype.preventDefault = function() {
+            // Csak akkor engedélyezzük a preventDefault-et, ha nem scroll esemény
+            if (this.type !== 'scroll' && this.type !== 'touchmove') {
+                originalPreventDefault.call(this);
+            }
+        };
+        
+        // Mobil orientation változás esetén is javítjuk a scrollt
+        window.addEventListener('orientationchange', function() {
+            setTimeout(() => {
+                document.body.style.overflowY = 'visible';
+                document.documentElement.style.overflowY = 'scroll';
+            }, 100);
+        });
+    }
 });
 
 // Testimonial Form Functionality

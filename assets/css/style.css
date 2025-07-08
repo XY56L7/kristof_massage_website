@@ -15,7 +15,10 @@ a {
 html {
     scroll-behavior: smooth;
     overflow-x: hidden;
+    overflow-y: scroll;
     width: 100%;
+    height: 100%;
+    -webkit-overflow-scrolling: touch;
 }
 
 body {
@@ -25,9 +28,12 @@ body {
     min-height: 100vh;
     position: relative;
     overflow-x: hidden;
-    overflow-y: auto;
+    overflow-y: visible;
     width: 100%;
+    height: 100%;
     -webkit-overflow-scrolling: touch;
+    overscroll-behavior-x: none;
+    overscroll-behavior-y: auto;
 }
 
 .wrapper {
@@ -1531,29 +1537,37 @@ body.menu-open {
   color: #FFD700;
 }
 
-.no-scroll {
-  overflow: hidden;
-}
+/* .no-scroll osztály eltávolítva a mobilos scroll problémák elkerülése érdekében */
 
 @media (max-width: 768px) {
-  html, body {
+  html {
     height: 100%;
     overflow-x: hidden;
+    overflow-y: scroll !important;
     position: relative;
+    -webkit-overflow-scrolling: touch;
   }
 
   body {
-    overflow-y: auto !important;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: visible !important;
+    position: relative;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-x: none;
+    overscroll-behavior-y: auto;
   }
 
   .wrapper {
     min-height: 100%;
-    overflow-y: auto;
+    overflow-x: hidden;
+    overflow-y: visible !important;
   }
 
   main {
     flex: 1;
-    overflow-y: auto;
+    overflow-x: hidden;
+    overflow-y: visible !important;
     -webkit-overflow-scrolling: touch;
   }
 
