@@ -379,7 +379,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Optional: Open first FAQ item by default
-    if (faqItems.length > 0) {
-        faqItems[0].classList.add('active');
-    }
+    // if (faqItems.length > 0) {
+    //     faqItems[0].classList.add('active');
+    // }
 });
