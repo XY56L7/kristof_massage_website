@@ -679,6 +679,7 @@ color: var(--main-color);
     transform: translateY(-10px) scale(1.02);
     box-shadow: 0 15px 40px rgba(212, 192, 162, 0.3);
     border-color: var(--active-color);
+    cursor: default;
 }
 
 .glry-item-img {
