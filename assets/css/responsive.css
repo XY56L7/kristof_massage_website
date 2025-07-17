@@ -950,6 +950,15 @@ body {
     
     .map iframe {
         height: 200px;
+        margin-bottom: 0;
+    }
+    
+    .map-container {
+        margin-bottom: 0;
+    }
+    
+    .right-footer {
+        margin-bottom: 0;
     }
     
     .map-overlay {
@@ -1073,6 +1082,15 @@ body {
     
     .map iframe {
         height: 180px;
+        margin-bottom: 0;
+    }
+    
+    .map-container {
+        margin-bottom: 0;
+    }
+    
+    .right-footer {
+        margin-bottom: 0;
     }
     
     .footer .golden-leaf {
