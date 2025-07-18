@@ -81,7 +81,7 @@ navbar desine */
     position: fixed;
     top: 0;
     left: 0;
-    right: 0;
+    right: 10px;
     z-index: 1000;
     background: rgba(0, 77, 64, 0.95);
     backdrop-filter: blur(10px);
