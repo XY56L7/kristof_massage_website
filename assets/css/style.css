@@ -328,6 +328,11 @@ position: relative;
     object-fit: cover;
 }
 
+/* Hide pagination dots for banner slider */
+.banner-right .splide__pagination {
+    display: none !important;
+}
+
 .banner-left {
     width: 50%;
     height: 100%;
