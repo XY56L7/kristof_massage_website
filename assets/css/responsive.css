@@ -2,12 +2,12 @@
     box-sizing: border-box;
 }
 
-/* Mobilos scroll problémák teljes javítása */
+
 html {
     width: 100%;
     height: 100%;
     overflow-x: hidden;
-    overflow-y: scroll; /* Mindig legyen scroll */
+    overflow-y: scroll;
     -webkit-overflow-scrolling: touch;
     scroll-behavior: smooth;
 }
@@ -18,10 +18,10 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-    overflow-y: visible; /* Nem korlátozzuk a függőleges scrollt */
+    overflow-y: visible;
     -webkit-overflow-scrolling: touch;
-    overscroll-behavior-x: none; /* Horizontális bounce tiltása */
-    overscroll-behavior-y: auto; /* Függőleges bounce engedése */
+    overscroll-behavior-x: none;
+    overscroll-behavior-y: auto;
 }
 
 .wrapper {
@@ -31,18 +31,18 @@ body {
     position: relative;
 }
 
-/* Mobilos scroll problémák javítása */
+
 @media (max-width: 768px) {
     html {
         overflow-x: hidden;
-        overflow-y: scroll !important; /* Mindig scroll */
+        overflow-y: scroll !important;
         -webkit-overflow-scrolling: touch;
         scroll-behavior: smooth;
     }
     
     body {
         overflow-x: hidden;
-        overflow-y: visible !important; /* Nem korlátozzuk */
+        overflow-y: visible !important;
         -webkit-overflow-scrolling: touch;
         overscroll-behavior-x: none;
         overscroll-behavior-y: auto;
@@ -58,7 +58,7 @@ body {
         position: relative;
     }
     
-    /* Navbar javítás - ne zavarjon a scroll-ba */
+
     .navbar {
         padding: 1rem 10px !important;
         position: fixed !important;
@@ -69,21 +69,21 @@ body {
         will-change: transform;
     }
     
-    /* Containers javítás */
+
     .containers {
         width: 100% !important;
         padding-left: 10px !important;
         padding-right: 10px !important;
-        margin-top: 80px !important; /* Navbar magasság kompenzálása */
+        margin-top: 80px !important;
     }
     
-    /* Banner section magasság és padding javítások */
+
     .banner-sec {
         width: 100% !important;
         padding-left: 10px !important;
         padding-right: 10px !important;
-        height: 70vh !important; /* Megnövelem a magasságot hogy jobban kitöltse a képernyőt */
-        min-height: 500px !important; /* Minimum magasság biztosítása */
+        height: 70vh !important;
+        min-height: 500px !important;
         display: flex !important;
         align-items: center !important;
         justify-content: center !important;
@@ -91,7 +91,7 @@ body {
         overflow: visible !important;
     }
     
-    /* Banner tartalom igazítása */
+
     .banner-right {
         width: 100% !important;
         height: 100% !important;
@@ -149,7 +149,7 @@ body {
         min-height: 100% !important;
     }
     
-    /* Minden szekció overflow javítása */
+
     .about-sec,
     .contact-sec,
     .service-grid,
@@ -160,7 +160,7 @@ body {
         position: relative !important;
     }
     
-    /* Footer width fix */
+
     .footer {
         width: 100% !important;
         margin-left: 0 !important;
@@ -168,7 +168,7 @@ body {
         overflow: visible !important;
     }
     
-    /* Footer CTA buttons responsive */
+
     .footer-cta-buttons {
         flex-direction: column;
         gap: 15px;
@@ -187,36 +187,36 @@ body {
         font-size: 16px;
     }
     
-    /* Main footer padding fix */
+
     .main-footer {
         padding: 0 10px !important;
     }
     
-    /* Contact section padding fix */
+
     .contact-sec {
         padding-left: 10px !important;
         padding-right: 10px !important;
     }
     
-    /* Service grid padding fix */
+
     .service-grid {
         padding-left: 10px !important;
         padding-right: 10px !important;
     }
     
-    /* Testimonial section padding fix */
+
     .testinomial {
         padding-left: 10px !important;
         padding-right: 10px !important;
     }
     
-    /* FAQ section padding fix */
+
     .faq-section {
         padding-left: 10px !important;
         padding-right: 10px !important;
     }
     
-    /* Gallery section padding fix */
+
     .glry {
         width: 100%;
         margin: 40px auto;
@@ -276,7 +276,7 @@ body {
         font-size: 14px;
     }
     
-    /* About section padding fix */
+
     .about-sec {
         padding-left: 10px !important;
         padding-right: 10px !important;
@@ -284,7 +284,7 @@ body {
 }
 
 @media (max-width: 600px) {
-    /* Scroll problémák javítása kis képernyőkön */
+
     html {
         overflow-x: hidden;
         overflow-y: scroll !important;
@@ -310,7 +310,7 @@ body {
         position: relative;
     }
     
-    /* Még kisebb padding még kisebb képernyőkre */
+
     .navbar {
         padding: 0.5rem 5px !important;
         position: fixed !important;
@@ -321,7 +321,7 @@ body {
         will-change: transform;
     }
     
-    /* Banner section még nagyobb magasság kis képernyőkön */
+
     .banner-sec {
         height: 75vh !important;
         min-height: 550px !important;
@@ -348,7 +348,7 @@ body {
         overflow: visible !important;
     }
     
-    /* Footer CTA buttons for small screens */
+
     .footer-title {
         font-size: 24px !important;
     }
@@ -367,7 +367,7 @@ body {
         font-size: 14px;
     }
     
-    /* Gallery for small screens */
+
     .glry {
         padding: 15px 5px;
         margin: 30px auto;
@@ -423,7 +423,7 @@ body {
     }
 }
 
-/* Eredeti responsive stílusok */
+
 .wrapper {
     max-width: 1920px;
     margin: 0 auto;
@@ -438,18 +438,18 @@ body {
     }
 }
 
-/* for large screen like tv*/
+
 @media only screen and (min-width: 1920px) {
 
 }
 
-/* for small screen like mobile - EGYSZERŰ MŰKÖDŐ VERZIÓ */
+
 @media only screen and (max-width: 600px) {
   .navbar .middle-side {
     display: none;}
     .navbar .right-side {
       width: 40%;
-      /* border: 1px solid red; */
+
   }
   .logo img {
     margin-right: 10px;
@@ -464,19 +464,17 @@ body {
  
   width: 50%;
   height: 100%;
-  /* display: flex; */
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  /* border: 1px solid red; */
   display: none;
 }
 
-/* EGYSZERŰ BANNER SECTION - MŰKÖDŐ VERZIÓ */
+
 .banner-sec {
   position: relative;
   width: 100%;
-  height: 70vh !important; /* Nagyobb magasság */
+  height: 70vh !important;
   min-height: 500px !important;
   display: flex;
   align-items: center;
@@ -485,8 +483,8 @@ body {
 }
 
 .banner-right {
-  width: 90% !important; /* Kicsit kisebb szélesség */
-  height: 80% !important; /* Magasság beállítás */
+  width: 90% !important;
+  height: 80% !important;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -507,12 +505,12 @@ body {
 .border-right-content {
   width: 100%;
   height: 100%;
-  border-radius: 280px 0 0 280px; /* Kicsit kisebb radius */
+  border-radius: 280px 0 0 280px;
   overflow: hidden;
-  background: #333; /* Háttér, ha nincs kép */
+  background: #333;
 }
 
-/* SPLIDE SLIDER EGYSZERŰ MOBILOS VERZIÓ */
+
 .banner-right .splide {
   width: 100%;
   height: 100%;
@@ -541,7 +539,7 @@ body {
   overflow: hidden;
 }
 
-/* KÉPEK EGYSZERŰ MOBILOS VERZIÓ */
+
 .banner-right .splide__slide img {
   width: 100%;
   height: 100%;
@@ -552,12 +550,10 @@ body {
 
 .about-left {
   width: 100%;
-  /* border: 1px solid red; */
 }
 .about-right {
   display: none;
   width: 30%;
-  /* border: 1px solid red; */
 }
 .border-heading {
   width: 50%;
@@ -566,7 +562,6 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
-  /* border: 1px solid green; */
 }
 .small-wrightup {
   padding: 10px 0 10px 0;
@@ -611,23 +606,19 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  /* border: 1px solid red; */
   flex-direction: column;
-  padding: 20px 0; /* Extra padding a contact section teljes megjelenítéséhez */
+  padding: 20px 0;
 }
 .left-footer {
   text-align: center;
   width: 100%;
-  /* border: 1px solid red; */
 }
 .middle-footer {
   width: 100%;
-  /* border: 1px solid red; */
 }
 .right-footer {
   width: 100%;
   margin-right: 30px;
-  /* border: 1px solid red; */
 }
 .footer .golden-leaf {
   display: none;
@@ -657,12 +648,11 @@ body {
 .footer .border-heading {
   padding-top: 15px;
   width: 100%;
-  /* text-align: center; */
+
 }
 .real-footer {
   width: 90%;
   margin: 5px auto;
-  /* border: 1px solid red; */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -684,7 +674,7 @@ body {
   margin: 20px auto 0 auto;
 }
 
-/* Testimonial Section Mobile Styles */
+
 .testinomial {
   width: 95%;
   margin: 30px auto;
@@ -747,7 +737,7 @@ body {
   right: -20px;
 }
 
-/* FAQ Section Mobile Styles */
+
 .faq-section {
   width: 95%;
   margin: 30px auto;
@@ -810,7 +800,7 @@ body {
 }
 }
 
-/* Footer responsive styles */
+
 @media (max-width: 768px) {
     .footer {
         width: 95%;
@@ -911,7 +901,7 @@ body {
         font-size: 14px;
     }
     
-    /* Contact card text center alignment on mobile */
+
     .contact-info {
         text-align: center;
         align-items: center;
@@ -1055,7 +1045,7 @@ body {
         font-size: 12px;
     }
     
-    /* Contact card improvements for small screens */
+
     .contact-info {
         text-align: center;
         align-items: center;
@@ -1100,7 +1090,7 @@ body {
     }
 }
 
-/* Medium screens - tablet */
+
 @media (min-width: 769px) and (max-width: 1024px) {
     .glry-main {
         grid-template-columns: repeat(2, 1fr);

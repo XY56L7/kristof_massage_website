@@ -1,4 +1,4 @@
-// used Gsap versiom v-3.12.2
+
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -22,7 +22,7 @@ gsap.from(".menu-gsap", {
 
   gsap.from(".logo-social", {
     duration: .5,
-//    y:"-200%",
+
     opacity: 0,
     scale:3,
     ease: "none",
@@ -30,7 +30,7 @@ gsap.from(".menu-gsap", {
     delay: 2,
   });
   gsap.from(".banner-gsap", {
-    // duration: .5,
+
     x:"200%",
     ease: "none",
     stagger: ".5",
@@ -52,7 +52,7 @@ const lenis = new Lenis()
 lenis.on('scroll', ScrollTrigger.update)
 
 gsap.ticker.add((time)=>{
-  lenis.raf(time * 400) // adjust smoothness of mouse scroll
+  lenis.raf(time * 400)
 })
 
 gsap.ticker.lagSmoothing(0)
