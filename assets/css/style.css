@@ -1,6 +1,6 @@
 @import url("./global.css");
 
-/* RE-SET */
+
 * {
     font-family: 'Montserrat', sans-serif;
 a {
@@ -63,10 +63,9 @@ main {
   right: 0;
 }
 
-/* 
-navbar desine */
+
 .price{
-    /* border: 1px solid red; */
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -99,9 +98,9 @@ navbar desine */
 }
 
 .containers {
-    margin-top: 80px; /* Add space for fixed navbar */
+    margin-top: 80px;
     width: 100%;
-    /* rest of the existing styles */
+
 }
 
 .navbar .leaf {
@@ -132,12 +131,10 @@ navbar desine */
 .navbar .left-side {
 
     width: 20%;
-    /* border: 1px solid red; */
 }
 
 .logo {
     display: flex;
-    /* border: 1px solid red; */
     width: 100%;
     align-items: center;
     transition: .5s ease-in-out;
@@ -161,7 +158,6 @@ position: relative;
 .footer-logo{
     width: 100%;
     padding-bottom: 10px;
-    /* border: 1px solid red; */
     display: flex;
     align-items: center;
     justify-content:center;
@@ -207,12 +203,10 @@ position: relative;
 
 .navbar .middle-side {
     width: 50%;
-    /* border: 1px solid red; */
 }
 
 .navbar .right-side {
     width: 15%;
-    /* border: 1px solid red; */
 }
 
 .list-navbar {
@@ -296,7 +290,6 @@ position: relative;
     overflow: hidden;
     padding: 0 0 25px 0;
     height: 100%;
-    /* border: 1px solid red; */
 }
 
 .border-right {
@@ -314,7 +307,6 @@ position: relative;
     height: 100%;
     border-radius: 300px 0 0 300px;
     overflow: hidden;
-    /* background-color: black; */
 }
 
 .border-right-content img {
@@ -328,7 +320,7 @@ position: relative;
     object-fit: cover;
 }
 
-/* Hide pagination dots for banner slider */
+
 .banner-right .splide__pagination {
     display: none !important;
 }
@@ -340,22 +332,18 @@ position: relative;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    /* border: 1px solid red; */
 }
 
 .upper-banner {
     text-align: center;
     height: 30%;
-    /* border: 1px solid rgb(0, 255, 13); */
 }
 
 .upper-banner .main-heading {
     color: white;
-    /* font-family: 'MonotypeCorsiva'; */
     font-family: 'Ubuntu';
     font-weight: 400;
     font-size: 50px;
-    /* border: 1px solid rgb(34, 0, 255); */
     margin: 15px;
     letter-spacing: 4px;
 }
@@ -456,7 +444,6 @@ position: relative;
 }
 .about-left{
     width:60%;
-    /* border: 1px solid red; */
 }
 .border-heading{
     width: 30%;
@@ -464,7 +451,6 @@ position: relative;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* border: 1px solid green; */
 }
 .border-heading-text{
     font-size: 35px;
@@ -488,17 +474,14 @@ position: relative;
 
 .about-right{
     width: 30%;
-    /* border: 1px solid red; */
 }
 .about-right img{
     width: 100%;
-    /* opacity: .8; */
 }
 
 .card-scroll{
     margin-top: 50px;
     width: 100%;
-    /* border: 1px solid red; */
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -512,8 +495,6 @@ position: relative;
 .scroll-contents{
     width: 100%;
     margin-top: 20px;
-    /* padding: 0 50px; */
-    /* border: 1px solid red; */
 }
 .card{
     width: 260px;
@@ -534,7 +515,6 @@ position: relative;
 .card-img{
 width: 100%;
 height: 55%;
-/* border: 1px solid red; */
 }
 .card-img img{
     width: 100%;

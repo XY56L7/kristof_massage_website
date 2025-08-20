@@ -5,7 +5,7 @@ A modern, responsive website for **Kajtár Kristóf**, a professional massage th
 
 ## 🌟 Overview
 
-Aroved Wellness is a comprehensive business website designed for a massage therapy practice. It features a sophisticated user interface with smooth animations, responsive design, and modern web technologies to provide an excellent user experience across all devices.
+Kajtar Kristof massage is a comprehensive business website designed for a massage therapy practice. It features a sophisticated user interface with smooth animations, responsive design, and modern web technologies to provide an excellent user experience across all devices.
 
 ## 🚀 Key Features
 
@@ -54,7 +54,7 @@ Aroved Wellness is a comprehensive business website designed for a massage thera
 ## 📁 Project Structure
 
 ```
-arovedwellness.com/
+root/
 ├── assets/
 │   ├── css/
 │   │   ├── style.css           # Main stylesheet

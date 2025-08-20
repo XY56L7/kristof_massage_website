@@ -20,14 +20,14 @@
         { main: 'Another Heading', sub: 'Subtitle 2' },
         { main: 'Yet Another Heading', sub: 'Subtitle 3' },
         { main: 'Yet Another Heading', sub: 'Subtitle 4' },
-        // Add more data as needed
+
       ];
 
       var mainHeading = document.querySelector('.main-heading');
       var subHeading = document.querySelector('.bottom-2nd-head');
 
       if (mainHeading && subHeading) {
-        // Use GSAP for animations
+
         gsap.to(mainHeading, {
           text: { value: "", chars: "all", stagger: 0.2, ease: "power4.out" },
           duration: 0.5,
@@ -72,17 +72,17 @@
 
     newSplide.mount();
     function determinePerPage() {
-      //  Check the screen width and return the appropriate perPage value
-      if (window.innerWidth < 768) { //   Adjust this breakpoint as needed
-        return 1;  //  Set perPage to 1 for mobile screens
+
+      if (window.innerWidth < 768) {
+        return 1;
       } else {
-        return 4;  //  Set perPage to a different value for larger screens
+        return 4;
       }
     }
     window.addEventListener("resize", function () {
       newSplide.options.perPage = determinePerPage();
-      newSplide.destroy();   // Destroy the current instance
-      newSplide.mount();   // Reinitialize the Splide slider with updated options
+      newSplide.destroy();
+      newSplide.mount();
     });
 
 
@@ -91,13 +91,13 @@
 }
 
 {
-  // WHATSAPP DETAILS
+
   document.querySelector('.whatsapp-float').addEventListener('click', function() {
     window.open('https://api.whatsapp.com/send?phone=917008822838', '_blank');
 });
 }
 
-// Sticky Navbar
+
 const navbar = document.querySelector('.navbar');
 let lastScroll = 0;
 
@@ -105,17 +105,17 @@ window.addEventListener('scroll', () => {
     const currentScroll = window.pageYOffset;
     
     if (currentScroll > lastScroll && currentScroll > 100) {
-        // Scrolling down & passed threshold
+
         navbar.classList.add('scrolled');
     } else {
-        // Scrolling up or at top
+
         navbar.classList.remove('scrolled');
     }
     
     lastScroll = currentScroll;
 });
 
-// Mobile Menu Functionality
+
 document.addEventListener('DOMContentLoaded', function() {
     const hamburger = document.querySelector('.hamburger-menu');
     const mobileNav = document.querySelector('.mobile-nav');
@@ -128,18 +128,14 @@ document.addEventListener('DOMContentLoaded', function() {
         hamburger.classList.toggle('active');
         mobileNav.classList.toggle('active');
         
-        // Teljesen eltávolítom a scroll blokkolást
-        // A menü overlay-ként működik, nem blokkolja a háttér scrollt
         if (mobileNav.classList.contains('active')) {
-            // Menü megnyitása - scroll engedélyezve marad
             body.classList.add('menu-open');
         } else {
-            // Menü bezárása
             body.classList.remove('menu-open');
         }
     }
 
-    // Hamburger click event
+
     if (hamburger) {
         hamburger.addEventListener('click', function(e) {
             e.stopPropagation();
@@ -147,7 +143,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Close button click event
+
     if (closeMenu) {
         closeMenu.addEventListener('click', function(e) {
             e.stopPropagation();
@@ -155,14 +151,14 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Close menu when clicking links
+
     mobileNavLinks.forEach(link => {
         link.addEventListener('click', function(e) {
             toggleMenu();
         });
     });
 
-    // Close menu when clicking outside
+
     document.addEventListener('click', function(e) {
         if (mobileNav.classList.contains('active') &&
             !mobileNav.contains(e.target) &&
@@ -171,12 +167,12 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Prevent clicks inside mobile nav from closing it
+
     mobileNav.addEventListener('click', function(e) {
         e.stopPropagation();
     });
 
-    // Handle resize events
+
     window.addEventListener('resize', function() {
         if (window.innerWidth > 768 && mobileNav.classList.contains('active')) {
             toggleMenu();
@@ -184,15 +180,15 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// Horizontal scrolling fix - Javított verzió mobilos scroll problémák nélkül
+
 document.addEventListener('DOMContentLoaded', function() {
-    // Csak horizontális scrolling letiltása, függőleges megtartása
+
     document.body.style.overflowX = 'hidden';
     document.documentElement.style.overflowX = 'hidden';
     
-    // Fix viewport width issues - csak desktop-on
+
     function fixViewportWidth() {
-        // Csak akkor futtatjuk, ha nem mobil eszköz
+
         if (window.innerWidth > 768) {
             const elements = document.querySelectorAll('*');
             elements.forEach(element => {
@@ -204,11 +200,11 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
     
-    // Run on load and resize - csak desktop-on
+
     fixViewportWidth();
     window.addEventListener('resize', fixViewportWidth);
     
-    // Javított touch kezelés - csak horizontális swipe-ok blokkolása
+
     let startX = 0;
     let startY = 0;
     let isHorizontalSwipe = false;
@@ -225,33 +221,33 @@ document.addEventListener('DOMContentLoaded', function() {
         const diffX = Math.abs(currentX - startX);
         const diffY = Math.abs(currentY - startY);
         
-        // Csak akkor blokkoljuk, ha egyértelműen horizontális swipe
+
         if (diffX > diffY && diffX > 30) {
             isHorizontalSwipe = true;
             e.preventDefault();
         }
-        // Ha függőleges swipe, hagyjuk futni
+
     }, { passive: false     });
 });
 
-// Extra mobilos scroll javítás - biztonsági megoldás
+
 document.addEventListener('DOMContentLoaded', function() {
-    // Mobilos eszközökön biztosítjuk, hogy a scroll mindig működjön
+
     if (window.innerWidth <= 768) {
-        // Minden scroll-blokkoló CSS felülírása
+
         document.body.style.overflowY = 'visible';
         document.documentElement.style.overflowY = 'scroll';
         
-        // Ha valaki JavaScript-ből blokkolná a scrollt, ezt megakadályozzuk
+
         const originalPreventDefault = Event.prototype.preventDefault;
         Event.prototype.preventDefault = function() {
-            // Csak akkor engedélyezzük a preventDefault-et, ha nem scroll esemény
+
             if (this.type !== 'scroll' && this.type !== 'touchmove') {
                 originalPreventDefault.call(this);
             }
         };
         
-        // Mobil orientation változás esetén is javítjuk a scrollt
+
         window.addEventListener('orientationchange', function() {
             setTimeout(() => {
                 document.body.style.overflowY = 'visible';
@@ -261,19 +257,19 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-// Testimonial Form Functionality
+
 document.addEventListener('DOMContentLoaded', function() {
     const ratingStars = document.querySelectorAll('.rating-stars i');
     const ratingInput = document.getElementById('review-rating');
     const testimonialForm = document.getElementById('testimonial-form');
 
-    // Rating stars functionality
+
     ratingStars.forEach((star, index) => {
         star.addEventListener('click', function() {
             const rating = index + 1;
             ratingInput.value = rating;
             
-            // Update stars visual state
+
             ratingStars.forEach((s, i) => {
                 if (i < rating) {
                     s.classList.add('active');
@@ -283,7 +279,7 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
 
-        // Hover effect
+
         star.addEventListener('mouseenter', function() {
             const rating = index + 1;
             ratingStars.forEach((s, i) => {
@@ -296,7 +292,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Reset hover effect
+
     document.querySelector('.rating-stars').addEventListener('mouseleave', function() {
         const currentRating = parseInt(ratingInput.value);
         ratingStars.forEach((s, i) => {
@@ -308,10 +304,10 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Initialize with 5 stars
+
     ratingStars.forEach(star => star.classList.add('active'));
 
-    // Form submission
+
     testimonialForm.addEventListener('submit', function(e) {
         e.preventDefault();
         
@@ -323,25 +319,25 @@ document.addEventListener('DOMContentLoaded', function() {
             review: formData.get('review')
         };
 
-        // Simple validation
+
         if (!reviewData.name || !reviewData.email || !reviewData.review) {
             alert('Kérjük, töltse ki az összes mezőt!');
             return;
         }
 
-        // Simulate form submission
+
         const submitBtn = testimonialForm.querySelector('.testimonial-submit-btn');
         const originalText = submitBtn.innerHTML;
         
         submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Küldés...';
         submitBtn.disabled = true;
 
-        // Simulate API call
+
         setTimeout(() => {
             alert('Köszönjük véleményét! Hamarosan megjelenik az oldalon.');
             testimonialForm.reset();
             
-            // Reset stars to 5
+
             ratingStars.forEach(star => star.classList.add('active'));
             ratingInput.value = '5';
             
@@ -351,7 +347,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// FAQ Accordion Functionality
+
 document.addEventListener('DOMContentLoaded', function() {
     const faqItems = document.querySelectorAll('.faq-item');
     
@@ -362,14 +358,14 @@ document.addEventListener('DOMContentLoaded', function() {
         question.addEventListener('click', function() {
             const isActive = item.classList.contains('active');
             
-            // Close all other FAQ items
+
             faqItems.forEach(otherItem => {
                 if (otherItem !== item) {
                     otherItem.classList.remove('active');
                 }
             });
             
-            // Toggle current item
+
             if (isActive) {
                 item.classList.remove('active');
             } else {
@@ -378,8 +374,5 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Optional: Open first FAQ item by default
-    // if (faqItems.length > 0) {
-    //     faqItems[0].classList.add('active');
-    // }
+
 });
