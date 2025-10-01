@@ -93,7 +93,7 @@
 {
 
   document.querySelector('.whatsapp-float').addEventListener('click', function() {
-    window.open('https://api.whatsapp.com/send?phone=917008822838', '_blank');
+    window.open('https://app.minup.io/book/kajtar-kristof-masszor', '_blank');
 });
 }
 

@@ -3,6 +3,8 @@
 
 * {
     font-family: 'Montserrat', sans-serif;
+}
+
 a {
     text-decoration: none;
 }
@@ -277,8 +279,8 @@ position: relative;
 
 .banner-sec {
     position: relative;
-    width: 95%;
-    margin: 0 auto;
+    width: 100%;
+    margin: 0;
     padding-top: 100px;
     display: flex;
     justify-content: space-between;
@@ -286,10 +288,11 @@ position: relative;
 }
 
 .banner-right {
-    width: 50%;
+    width: 35%;
     overflow: hidden;
     padding: 0 0 25px 0;
     height: 100%;
+    margin-left: auto;
 }
 
 .border-right {
@@ -326,12 +329,13 @@ position: relative;
 }
 
 .banner-left {
-    width: 50%;
+    width: 65%;
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    padding-left: 2.5%;
 }
 
 .upper-banner {
@@ -670,6 +674,10 @@ color: var(--main-color);
     cursor: default;
 }
 
+.glry-item.no-zoom-item:hover {
+    transform: translateY(-10px) scale(1) !important;
+}
+
 .glry-item-img {
     width: 100%;
     height: 250px;
@@ -684,8 +692,18 @@ color: var(--main-color);
     transition: transform 0.4s ease;
 }
 
+.glry-item-img img.no-zoom {
+    transform: scale(1) !important;
+    object-fit: contain !important;
+}
+
 .glry-item:hover .glry-item-img img {
     transform: scale(1.1);
+}
+
+.glry-item:hover .glry-item-img img.no-zoom {
+    transform: scale(1) !important;
+    object-fit: contain !important;
 }
 
 .glry-item-overlay {
@@ -1172,7 +1190,7 @@ color: var(--main-color);
     width: fit-content;
     height: 30px;
     cursor: pointer;
-    background-color: #25d36575;
+    background-color: var(--active-color);
     border-radius: 10px;
     padding: 10px;
     display: flex;
@@ -1180,8 +1198,9 @@ color: var(--main-color);
     justify-content: center;
     backdrop-filter: blur(3px);
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-    border: 1px solid var(--active-color) ;
-    z-index: 9999; /* Adjust this value based on your page's layout */
+    border: 1px solid var(--active-color);
+    z-index: 9999;
+    transition: all 0.3s ease;
 }
 .whatsapp-float-p{
     font-weight: 600;
@@ -1191,10 +1210,15 @@ color: var(--main-color);
 }
 
 .whatsapp-float i {
-    font-size: 2rem; /* Adjust the size of the icon as needed */
-    color: #ffffff; /* WhatsApp green color */
+    font-size: 1.5rem;
+    color: #ffffff;
     border-radius: 50%;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.whatsapp-float:hover {
+    background-color: var(--main-color);
+    transform: scale(1.05);
 }
 
 
@@ -1787,6 +1811,34 @@ body.menu-open {
     width: 15%;
     bottom: -60px;
     left: -30px;
+  }
+
+  /* Mobile whatsapp-float button - ensure visibility */
+  .whatsapp-float {
+    position: fixed !important;
+    bottom: 20px !important;
+    right: 20px !important;
+    width: fit-content !important;
+    height: auto !important;
+    z-index: 99999 !important;
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    padding: 10px !important;
+    background-color: var(--active-color) !important;
+    border-radius: 10px !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
+  }
+
+  .whatsapp-float p {
+    font-size: 14px !important;
+    margin-right: 10px !important;
+    color: white !important;
+  }
+
+  .whatsapp-float i {
+    font-size: 1.3rem !important;
+    color: white !important;
   }
 }
 
