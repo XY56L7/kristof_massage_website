@@ -36,17 +36,17 @@ if (window.innerWidth <= 768) {
 gsap.from(".banner-gsap", {
     x:"200%",
     ease: "power2.out",
-    stagger: ".2",
-    delay: .8,
-    duration:1.2,
+    stagger: ".15",
+    delay: .5,
+    duration:0.8,
 });
 
 gsap.from(".banner-gsap-left", {
     x:"-200%",
     ease: "power2.out",
-    stagger: ".2",
-    delay: .8,
-    duration:1.2,
+    stagger: ".15",
+    delay: .5,
+    duration:0.8,
 });
 
 const lenis = new Lenis()
