@@ -305,7 +305,8 @@ position: relative;
     overflow: hidden;
     padding: 0 0 25px 0;
     height: 100%;
-    margin-left: auto;
+    margin-left: 0;
+    margin-right: 1%;
 }
 
 .border-right {
@@ -1559,6 +1560,20 @@ body.menu-open {
 
 /* .no-scroll osztály eltávolítva a mobilos scroll problémák elkerülése érdekében */
 
+/* Nagyon kis képernyők (650px magasság és 600px szélesség alatt) */
+@media (max-width: 600px) and (max-height: 650px) {
+  .banner-sec {
+    padding-top: 180px !important;
+  }
+}
+
+/* Kis képernyők (600px alatt) */
+@media (max-width: 600px) {
+  .banner-sec {
+    padding-top: 140px !important;
+  }
+}
+
 @media (max-width: 768px) {
   html {
     height: 100%;
@@ -1617,7 +1632,7 @@ body.menu-open {
 
   .banner-sec {
     flex-direction: column;
-    padding-top: 80px;
+    padding-top: 140px;
     height: auto;
     margin-bottom: 30px;
     overflow: visible;
