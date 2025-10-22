@@ -1159,7 +1159,7 @@ color: var(--main-color);
 }
 
 .real-footer p{
-    font-size: 12px;
+    font-size: 18px;
     color: rgba(255, 255, 255, 0.7);
     margin: 0;
 }
@@ -1199,7 +1199,7 @@ color: var(--main-color);
 
 .whatsapp-float {
     position: fixed;
-    bottom: 20px;
+    bottom: 30px;
     right: 20px;
     width: fit-content;
     height: 30px;
