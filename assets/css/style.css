@@ -294,7 +294,7 @@ position: relative;
     position: relative;
     width: 100%;
     margin: 0;
-    padding-top: 100px;
+    padding-top: 80px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -2194,4 +2194,23 @@ body.menu-open {
   left: -50px;
   transform: rotate(-45deg);
   animation: windFloww 7s infinite ease-in-out;
+}
+
+/* Desktop screens (769px - 1499px) - smaller padding */
+@media (min-width: 769px) and (max-width: 1499px) {
+    .banner-sec {
+        padding-top: 80px !important;
+    }
+}
+
+/* Large screens (1500px and above) - more padding - MUST BE LAST */
+@media (min-width: 1600px) {
+    .banner-sec {
+        padding-top: 200px !important;
+    }
+}
+@media (min-width: 1499px) and (max-width: 1599px) {
+  .banner-sec {
+      padding-top: 120px !important;
+  }
 }
