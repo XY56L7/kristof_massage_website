@@ -49,12 +49,5 @@ gsap.from(".banner-gsap-left", {
     duration:0.8,
 });
 
-const lenis = new Lenis()
-
-lenis.on('scroll', ScrollTrigger.update)
-
-gsap.ticker.add((time)=>{
-  lenis.raf(time * 400)
-})
-
-gsap.ticker.lagSmoothing(0)
+// Natív görgetés (egérgörgő + touch): Lenis kikapcsolva, hogy ne akadjon el a scroll
+window.addEventListener('scroll', ScrollTrigger.update, { passive: true });

@@ -176,43 +176,36 @@ document.addEventListener('DOMContentLoaded', function() {
     fixViewportWidth();
     window.addEventListener('resize', fixViewportWidth);
     
+    // Csak a carousel/slider elemeken blokkoljuk a horizontális swipe-ot (vízszintes lapozás),
+    // hogy a dokumentum szintű érintéses görgetés soha ne legyen megakadályozva (mobil scroll javítása).
     let startX = 0;
     let startY = 0;
-    let isHorizontalSwipe = false;
-    
-    document.addEventListener('touchstart', function(e) {
+
+    function handleTouchStart(e) {
         startX = e.touches[0].clientX;
         startY = e.touches[0].clientY;
-        isHorizontalSwipe = false;
-    });
-    
-    document.addEventListener('touchmove', function(e) {
+    }
+
+    function handleTouchMove(e) {
         const currentX = e.touches[0].clientX;
         const currentY = e.touches[0].clientY;
         const diffX = Math.abs(currentX - startX);
         const diffY = Math.abs(currentY - startY);
-        
-        if (diffX > diffY && diffX > 30) {
-            isHorizontalSwipe = true;
-            e.preventDefault();
-        }
-    }, { passive: false });
+        if (diffX > diffY && diffX > 30) e.preventDefault();
+    }
+
+    document.querySelectorAll('.splide, .splide-new').forEach(function (el) {
+        el.addEventListener('touchstart', handleTouchStart, { passive: true });
+        el.addEventListener('touchmove', handleTouchMove, { passive: false });
+    });
 });
 
 document.addEventListener('DOMContentLoaded', function() {
     if (window.innerWidth <= 768) {
         document.body.style.overflowY = 'visible';
         document.documentElement.style.overflowY = 'scroll';
-        
-        const originalPreventDefault = Event.prototype.preventDefault;
-        Event.prototype.preventDefault = function() {
-            if (this.type !== 'scroll' && this.type !== 'touchmove') {
-                originalPreventDefault.call(this);
-            }
-        };
-        
         window.addEventListener('orientationchange', function() {
-            setTimeout(() => {
+            setTimeout(function() {
                 document.body.style.overflowY = 'visible';
                 document.documentElement.style.overflowY = 'scroll';
             }, 100);
