@@ -1156,6 +1156,7 @@ color: var(--main-color);
     border-top: 1px solid rgba(212, 192, 162, 0.2);
     flex-wrap: wrap;
     gap: 10px;
+    padding-block: 40px;
 }
 
 .real-footer p{
@@ -1199,14 +1200,14 @@ color: var(--main-color);
 
 .whatsapp-float {
     position: fixed;
-    bottom: 30px;
+    bottom: 80px;    
     right: 20px;
     width: fit-content;
     height: 30px;
     cursor: pointer;
     background-color: var(--active-color);
     border-radius: 10px;
-    padding: 10px 15px;
+    padding: 24px 20px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -2223,7 +2224,7 @@ body.menu-open {
     }
 
     .banner-right {
-      height: 660px !important;
+      height: 1400px !important;
   }
 }
 
@@ -2233,7 +2234,7 @@ body.menu-open {
     }
 
     .banner-right {
-      height: 700px !important;
+      height: 750px !important;
   }
 }
 
