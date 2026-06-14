@@ -1,57 +1,86 @@
 document.addEventListener('DOMContentLoaded', function () {
-  var splide = new Splide('.splide', {
-    type: "fade",
-    rewind: true,
-    autoplay: true,
-    interval: 3500,
-    arrows: false,
-    speed: 600,
-    pauseOnHover: false,
-    lazyLoad: 'nearby',
-    preloadPages: 1,
-  }).mount();
+  var bannerVideo = document.querySelector('.banner-video');
+  var bannerSoundBtn = document.querySelector('.banner-video-sound');
 
-  splide.on('moved', function (newIndex) {
-    updateHeadingWithAnimation(newIndex);
-  });
+  function updateBannerSoundButton() {
+    if (!bannerSoundBtn || !bannerVideo) return;
 
-  function updateHeadingWithAnimation(index) {
-    var data = [
-      { main: 'Aroved Wellness', sub: 'Subtitle 1' },
-      { main: 'Another Heading', sub: 'Subtitle 2' },
-      { main: 'Yet Another Heading', sub: 'Subtitle 3' },
-      { main: 'Yet Another Heading', sub: 'Subtitle 4' },
-    ];
+    var icon = bannerSoundBtn.querySelector('i');
+    var isMuted = bannerVideo.muted;
 
-    var mainHeading = document.querySelector('.main-heading');
-    var subHeading = document.querySelector('.bottom-2nd-head');
+    if (icon) {
+      icon.className = isMuted
+        ? 'fa-solid fa-volume-xmark'
+        : 'fa-solid fa-volume-high';
+    }
 
-    if (mainHeading && subHeading) {
-      gsap.to(mainHeading, {
-        text: { value: "", chars: "all", stagger: 0.2, ease: "power4.out" },
-        duration: 0.5,
-        onComplete: function () {
-          gsap.to(mainHeading, {
-            text: { value: data[index].main, chars: "all", stagger: 0.2, ease: "power4.in" },
-            duration: 0.5,
-          });
-        },
+    bannerSoundBtn.classList.toggle('is-unmuted', !isMuted);
+    bannerSoundBtn.setAttribute(
+      'aria-label',
+      isMuted ? 'Hang bekapcsolása' : 'Hang kikapcsolása'
+    );
+    bannerSoundBtn.setAttribute(
+      'title',
+      isMuted ? 'Hang bekapcsolása' : 'Hang kikapcsolása'
+    );
+  }
+
+  function enableBannerSound() {
+    if (!bannerVideo) return;
+
+    bannerVideo.muted = false;
+    bannerVideo.volume = 1;
+    updateBannerSoundButton();
+    bannerVideo.play().catch(function () {});
+  }
+
+  if (bannerVideo) {
+    bannerVideo.muted = false;
+    bannerVideo.volume = 1;
+    updateBannerSoundButton();
+
+    function setupAutoUnmuteOnInteraction() {
+      var autoUnmuteEvents = ['click', 'touchstart', 'keydown'];
+      function autoEnableSoundOnce() {
+        enableBannerSound();
+        autoUnmuteEvents.forEach(function (eventName) {
+          document.removeEventListener(eventName, autoEnableSoundOnce);
+        });
+      }
+
+      autoUnmuteEvents.forEach(function (eventName) {
+        document.addEventListener(eventName, autoEnableSoundOnce, { once: true, passive: true });
       });
-      
-      gsap.to(subHeading, {
-        text: { value: "", chars: "all", stagger: 0.2, ease: "power4.out" },
-        duration: 0.5,
-        onComplete: function () {
-          gsap.to(subHeading, {
-            text: { value: data[index].main, chars: "all", stagger: 0.2, ease: "power4.in" },
-            duration: 0.5,
-          });
-        },
+    }
+
+    bannerVideo.play().then(function () {
+      if (bannerVideo.muted) {
+        updateBannerSoundButton();
+        setupAutoUnmuteOnInteraction();
+      }
+    }).catch(function () {
+      bannerVideo.muted = true;
+      bannerVideo.play().catch(function () {});
+      updateBannerSoundButton();
+      setupAutoUnmuteOnInteraction();
+    });
+
+    if (bannerSoundBtn) {
+      bannerSoundBtn.addEventListener('click', function () {
+        bannerVideo.muted = !bannerVideo.muted;
+        if (!bannerVideo.muted) {
+          bannerVideo.volume = 1;
+        }
+        updateBannerSoundButton();
+        bannerVideo.play().catch(function () {});
       });
     }
   }
 
-  var newSplide = new Splide(".splide-new", {
+  var splideNewEl = document.querySelector('.splide-new');
+  if (!splideNewEl) return;
+
+  var newSplide = new Splide('.splide-new', {
     perPage: determinePerPage(),
     type: "loop",
     focus: 0,
@@ -194,7 +223,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (diffX > diffY && diffX > 30) e.preventDefault();
     }
 
-    document.querySelectorAll('.splide, .splide-new').forEach(function (el) {
+    document.querySelectorAll('.splide-new').forEach(function (el) {
         el.addEventListener('touchstart', handleTouchStart, { passive: true });
         el.addEventListener('touchmove', handleTouchMove, { passive: false });
     });

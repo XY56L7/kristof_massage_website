@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kajtár Kristóf Svédmasszőr</title>
-    <link rel="preload" href="./assets/image/banner/kristof.jpg" as="image">
+    <link rel="preload" href="./assets/video/Kajt%C3%A1r%20Krist%C3%B3f%20massz%C3%A1zs.mp4" as="video" type="video/mp4">
     <link rel="preload" href="./assets/css/style.css" as="style">
     <link rel="stylesheet" href="./assets/css/style.css" />
     <link rel="stylesheet" href="./assets/css/responsive.css" />
@@ -96,46 +96,19 @@
             </div>
             <div class="banner-right">
               <div class="border-right banner-gsap">
-                <div class="border-right-content banner-gsap">
-                  <div class="splide">
-                    <div class="splide__track">
-                      <ul class="splide__list">
-                        <li class="splide__slide">
-                          <img src="./assets/image/banner/kristof.jpg" alt="Slide 1" loading="eager" />
-                        </li>
-                        <li class="splide__slide">
-                          <img src="./assets/image/banner/olaj_1.jpg" alt="Slide 2" loading="lazy" />
-                        </li>
-                        
-                       <li class="splide__slide">
-                          <img src="./assets/image/banner/olaj_2.jpg" alt="Slide 3" loading="lazy" />
-                        </li>
-
-                        <li class="splide__slide">
-                          <img src="./assets/image/banner/olaj_3.jpg" alt="Slide 4" loading="lazy" />
-                        </li>
-
-                        <li class="splide__slide">
-                          <img src="./assets/image/banner/agy.jpg" alt="Slide 5" loading="lazy" />
-                        </li>
-
-                                                <li class="splide__slide">
-                          <img src="./assets/image/banner/agy_2_1.png" alt="Slide 6" loading="lazy" />
-                        </li>
-
-                        
-                                                <li class="splide__slide">
-                          <img src="./assets/image/banner/agy_3_1.jpg" alt="Slide 7" loading="lazy" />
-                        </li>
-                        <!-- <li class="splide__slide">
-                          <img src="./assets/image/banner/2.jpg" alt="Slide 2" />
-                        </li>
-                        <li class="splide__slide">
-                          <img src="./assets/image/banner/3.jpg" alt="Slide 3" />
-                        </li> -->
-                      </ul>
-                    </div>
-                  </div>
+                <div class="border-right-content banner-gsap banner-video-wrap">
+                  <video
+                    class="banner-video"
+                    src="./assets/video/Kajt%C3%A1r%20Krist%C3%B3f%20massz%C3%A1zs.mp4"
+                    poster="./assets/image/banner/kristof.jpg"
+                    autoplay
+                    loop
+                    playsinline
+                    aria-label="Kajtár Kristóf masszázs videó"
+                  ></video>
+                  <button type="button" class="banner-video-sound is-unmuted" aria-label="Hang kikapcsolása" title="Hang kikapcsolása">
+                    <i class="fa-solid fa-volume-high" aria-hidden="true"></i>
+                  </button>
                 </div>
               </div>
             </div>

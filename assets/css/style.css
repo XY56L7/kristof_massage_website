@@ -14,7 +14,8 @@ html {
     overflow-x: hidden;
     overflow-y: scroll;
     width: 100%;
-    height: 100%;
+    height: auto;
+    min-height: 100%;
     -webkit-overflow-scrolling: touch;
 }
 
@@ -27,7 +28,7 @@ body {
     overflow-x: hidden;
     overflow-y: visible;
     width: 100%;
-    height: 100%;
+    height: auto;
     -webkit-overflow-scrolling: touch;
     overscroll-behavior-x: none;
     overscroll-behavior-y: auto;
@@ -331,10 +332,48 @@ position: relative;
     height: 100%;
     object-fit: fill;
 }
-.border-right-content video {
+.border-right-content video,
+.banner-video {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center;
+    display: block;
+    border-radius: 300px 0 0 300px;
+}
+
+.banner-video-wrap {
+    position: relative;
+}
+
+.banner-video-sound {
+    position: absolute;
+    right: 16px;
+    bottom: 16px;
+    z-index: 2;
+    width: 42px;
+    height: 42px;
+    border: 2px solid var(--active-color);
+    border-radius: 50%;
+    background: rgba(0, 77, 64, 0.85);
+    color: var(--active-color);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    backdrop-filter: blur(6px);
+}
+
+.banner-video-sound:hover {
+    background: var(--active-color);
+    color: var(--main-color);
+    transform: scale(1.05);
+}
+
+.banner-video-sound.is-unmuted {
+    background: rgba(255, 255, 255, 0.15);
 }
 
 
@@ -1200,8 +1239,9 @@ color: var(--main-color);
 
 .whatsapp-float {
     position: fixed;
-    bottom: 80px;    
-    right: 20px;
+    bottom: 60px;
+    right: 24px;
+    left: auto;
     width: fit-content;
     height: 30px;
     cursor: pointer;
@@ -1235,7 +1275,14 @@ color: var(--main-color);
     transform: scale(1.05);
 }
 
-
+@media (min-width: 769px) {
+  .whatsapp-float {
+    position: fixed;
+    right: 24px;
+    left: auto;
+    bottom: 60px;
+  }
+}
 
 .subscribe {
     position: relative;
@@ -1576,8 +1623,11 @@ body.menu-open {
 }
 
 @media (max-width: 768px) {
+  /* height: 100% helyett auto: különben a dokumentum nem nő a tartalommal, és a láblécig nem lehet görgetni (főleg mobilon) */
   html {
-    height: 100%;
+    height: auto;
+    min-height: 100%;
+    min-height: 100dvh;
     overflow-x: hidden;
     overflow-y: scroll !important;
     position: relative;
@@ -1585,7 +1635,9 @@ body.menu-open {
   }
 
   body {
-    height: 100%;
+    height: auto;
+    min-height: 100%;
+    min-height: 100dvh;
     overflow-x: hidden;
     overflow-y: visible !important;
     position: relative;
@@ -1595,7 +1647,8 @@ body.menu-open {
   }
 
   .wrapper {
-    min-height: 100%;
+    min-height: 100vh;
+    min-height: 100dvh;
     overflow-x: hidden;
     overflow-y: visible !important;
   }
