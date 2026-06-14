@@ -1278,9 +1278,10 @@ color: var(--main-color);
 @media (min-width: 769px) {
   .whatsapp-float {
     position: fixed;
-    right: 24px;
-    left: auto;
+    left: 24px;
+    right: auto;
     bottom: 60px;
+    z-index: 99999;
   }
 }
 
@@ -1898,6 +1899,7 @@ body.menu-open {
   .whatsapp-float {
     position: fixed !important;
     bottom: 20px !important;
+    left: auto !important;
     right: 20px !important;
     width: fit-content !important;
     height: auto !important;
