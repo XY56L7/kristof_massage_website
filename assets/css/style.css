@@ -1237,6 +1237,22 @@ color: var(--main-color);
     opacity: 0.3;
 }
 
+@keyframes booking-glow {
+    0%, 100% {
+        box-shadow:
+            0 4px 12px rgba(0, 0, 0, 0.15),
+            0 0 10px rgba(221, 171, 97, 0.5),
+            0 0 22px rgba(221, 171, 97, 0.3);
+    }
+    50% {
+        box-shadow:
+            0 4px 18px rgba(0, 0, 0, 0.2),
+            0 0 18px rgba(221, 171, 97, 0.85),
+            0 0 36px rgba(221, 171, 97, 0.55),
+            0 0 56px rgba(221, 171, 97, 0.25);
+    }
+}
+
 .whatsapp-float {
     position: fixed;
     bottom: 60px;
@@ -1252,10 +1268,10 @@ color: var(--main-color);
     align-items: center;
     justify-content: center;
     backdrop-filter: blur(3px);
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-    border: 1px solid var(--active-color);
+    border: 1px solid rgba(221, 171, 97, 0.9);
     z-index: 9999;
     transition: transform 0.3s ease;
+    animation: booking-glow 2.5s ease-in-out infinite;
 }
 .whatsapp-float p {
     font-weight: 600;
@@ -1268,11 +1284,12 @@ color: var(--main-color);
     font-size: 1.5rem;
     color: #ffffff;
     border-radius: 50%;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.55));
 }
 
 .whatsapp-float:hover {
     transform: scale(1.05);
+    animation: booking-glow 1.6s ease-in-out infinite;
 }
 
 @media (min-width: 769px) {
@@ -1910,7 +1927,8 @@ body.menu-open {
     padding: 10px 15px !important;
     background-color: var(--active-color) !important;
     border-radius: 10px !important;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
+    border: 1px solid rgba(221, 171, 97, 0.9) !important;
+    animation: booking-glow 2.5s ease-in-out infinite !important;
     transition: transform 0.3s ease !important;
   }
 
@@ -1927,6 +1945,7 @@ body.menu-open {
 
   .whatsapp-float:hover {
     transform: scale(1.05) !important;
+    animation: booking-glow 1.6s ease-in-out infinite !important;
   }
 }
 
